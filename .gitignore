@@ -1,0 +1,2 @@
+# ignore the IntelliJ config folder in its entirety, as I don't expect to edit this repo often - by hand.
+.idea

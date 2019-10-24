@@ -1,0 +1,22 @@
+{
+  "short_name": "Thaumatorium",
+  "name": "Thaumatorium",
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#800",
+  "display": "minimal-ui",
+  "scope": "/",
+  "theme_color": "#800",
+  "content_security_policy": "script-src 'self' 'sha256-H3iXSw0jPAC5ZpTWDAxhPjq84VyAt3zbL9rB2OawEXw='; object-src 'self'"
+}

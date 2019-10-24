@@ -1,4 +1,4 @@
-For the source code, see Thaumatorium/website
+For the source code, see [Thaumatorium/website](https://github.com/Thaumatorium/website)
 
 These files get updated by a CI/CD pipeline and will NOT be pushed to by users.
 

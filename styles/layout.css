@@ -1,0 +1,11 @@
+/* Layout.css is basically for anything that doesn't fit the other files */
+
+* {
+  /* show CSS' box model */
+  /* border: 1px dotted black; */
+}
+
+body {
+  /* remove weird outer margin */
+  margin: 0;
+}

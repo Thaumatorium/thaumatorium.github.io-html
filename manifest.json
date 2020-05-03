@@ -1,6 +1,7 @@
 {
+  "name": "The Thaumatorium",
   "short_name": "Thaumatorium",
-  "name": "Thaumatorium",
+  "description": "Where the magic happens",
   "icons": [
     {
       "src": "/images/icons-192.png",
@@ -13,10 +14,27 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
-  "background_color": "#800",
+  "screenshots": [
+    {
+      "src": "images/screenshots/Thaumatorium v1.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "news",
+    "network",
+    "entertainment",
+    "games",
+    "productivity",
+    "social"
+  ],
+  "theme_color": "#880000",
+  "background_color": "#880000",
   "display": "minimal-ui",
   "scope": "/",
-  "theme_color": "#800",
-  "content_security_policy": "script-src 'self' 'sha256-H3iXSw0jPAC5ZpTWDAxhPjq84VyAt3zbL9rB2OawEXw='; object-src 'self'"
+  "start_url": "/",
+  "lang": "en-GB",
+  "dir": "auto",
+  "orientation": "any"
 }

@@ -1,1 +1,259 @@
-<!DOCTYPE html><html lang="en-US"><head> <meta charset="utf-8"/> <meta content="IE=edge" http-equiv="X-UA-Compatible"/> <title>Thaumatorium</title> <meta content="Where the Magic happens" name="description"/> <meta content="width=device-width, initial-scale=1" name="viewport"/> <link href="/manifest.json" rel="manifest"> <meta content="#800" name="theme-color"> <link href="images/icons-192.png" rel="apple-touch-icon"> <script src="elm.min.js" type="text/javascript"></script></head><body><div id="elm-root"></div><script>Elm.Main.init({node: document.getElementById("elm-root")});</script></body></html>
+﻿<!DOCTYPE html>
+<!-- Since I'm used to writing en-US, I'll probably make mistakes in this document. Oh well. -->
+<html lang="en-GB">
+
+<head>
+  <!--
+  This file is UTF-8 with BOM (Byte Order Mark) - If you're using a decent editor, you can also see this in the status bar (at the bottom of the window) - 
+  This means that the meta tag with charset=utf8 isn't needed.
+  You could also set Content-Type in the packet header (that's something you should set in your server software)
+  You can use http://validator.w3.org/i18n-checker/ to see if your header encoding to UTF-8
+  For more information: https://www.w3.org/International/questions/qa-html-encoding-declarations#nonutf8
+  -->
+  <!-- <meta charset="utf-8" /> -->
+  <!-- The title of the tab -->
+  <title>Thaumatorium</title>
+  <!-- <base href="https://thaumatorium.com/" /> -->
+  <base href="/" />
+  <!-- This description should show up in Google results -->
+  <meta name=description content="Where the Magic happens" />
+  <!-- Theme color for Android/iOS -->
+  <meta name=theme-color content=#800 />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- manifest.json is currently only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
+  <link rel=manifest href=/manifest.json />
+  <link rel=icon href=/images/favicon.svg />
+  <link defer rel=stylesheet href=styles/layout.css />
+  <link defer rel=stylesheet href=styles/header.css />
+  <link defer rel=stylesheet href=styles/nav.css />
+  <link defer rel=stylesheet href=styles/main.css />
+  <link defer rel=stylesheet href=styles/footer.css />
+</head>
+
+<body>
+  <header id=banner>
+    <a href="/">
+      <img src="/images/Thaumatorium.svg" alt="main logo consisting of a checkerboard pattern" height="111"
+        width="111" />
+    </a>
+    <h1>The Thaumatorium</h1>
+    <h2>Where the magic happens</h2>
+    <p>Last updated: <time>2020-05-02</time></p>
+  </header>
+
+  <nav>
+    <!-- `this` refers to the anchor element. `hash` refers to the `#xxxx` of the `href` attribute -->
+    <!-- You can't use `this.href`, because that returns the full URL and we only want the hash -->
+    <a onclick=gotoArticle(this.hash) href=#home>Home</a>
+    <a onclick=gotoArticle(this.hash) href=#articles>Articles</a>
+    <a onclick=gotoArticle(this.hash) href=#projects>Projects</a>
+    <a onclick=gotoArticle(this.hash) href=#experimentations>Experimentations</a>
+    <a onclick=gotoArticle(this.hash) href=#todo>TODO</a>
+    <a onclick=gotoArticle(this.hash) href=#about>About</a>
+  </nav>
+
+  <main id=home hidden>
+    <section>
+      <h1>Welcome to the Thaumatorium!</h1>
+      <p>Beepity boop, shoop da whoop!</p>
+      <p><strong>Note:</strong> You can check out the source of this page to see how HTML/CSS is <em>supposed</em> to be
+        used.<br>
+        As an example on how <em>not</em> to do HTML, take a look at Twitter with their
+        <code>&lt;div&gt;&lt;div&gt;&lt;div&gt;divs&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code>
+        nonsense.
+      </p>
+      <p><strong>Disclaimer:</strong> I'm not perfect, so this file <em>will likely</em> contain mistakes. If you find
+        any, please open a <a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues"
+          alt="Github Issue">Github Issue</a>, whether it's just a spelling mistake or something wrong with the HTML.
+      </p>
+      <p>
+        We are based in the Netherlands. We like to take an unnormal take on
+        things: Take a look at what the masses are doing, learning from them
+        by NOT doing that and finding out where the good shit is at!
+      </p>
+      <p>
+        That doesn't mean that popular = bad. We just hate JavaScript and its
+        ecology. Damn JavaScript.
+      </p>
+    </section>
+  </main>
+
+  <main id=articles hidden>
+    <section>
+      <h1><a onclick=gotoArticle(this.hash) href=#art-example>An example article</a></h1>
+      <h1><a onclick=gotoArticle(this.hash) href=#art-blog>Another blog</a></h1>
+    </section>
+  </main>
+
+  <main id=projects hidden>
+    <section>
+
+      <h1>Ongoing projects</h1>
+      <section>
+        <h1>Thaumatorium.com</h1>
+        <p>This site!</p>
+      </section>
+      <section>
+        <h1><abbr title="Semantic Override Network">SON</abbr></h1>
+        <p>A news aggregator that will pierce the stars!</p>
+      </section>
+      <h2>Projects created by members of the Thaumatorium</h2>
+      <p>What they are, were written in, how to run them, etc.</p>
+      <article>
+        <h3>Semantic Override Network</h3>
+        <p>An idea that formed over 4 years, slowly taking form over the years...</p>
+        <h4>Why use SON</h4>
+        <p>Because you can use it to share webpages, whether it's a news article, meme (text or image), video, music, or
+          app, save them, export them, and best of all: find related things. Got a low-res version of a meme? Upload it
+          to
+          Imgur, post it on SON, fill in some data and see if a higher res version pops up! Read an article where you
+          wonder if someone reacted to it? Find it on SON and check it out!</p>
+      </article>
+    </section>
+  </main>
+
+  <main id=experimentations hidden>
+    <section>
+      <h1>HTML/CSS/JS experimentations go here</h1>
+      <p style="font-family:'Times New Roman', Times, serif">test</p>
+      <p style="font-family: monospace">test</p>
+      <time>2019-11-29</time>
+      <figure>
+        <figcaption>
+          Using Pythagoras' theorem to solve for the hypotenuse
+          <var>a</var> of a triangle with sides <var>b</var> and
+          <var>c</var>
+        </figcaption>
+      </figure>
+      <p>To make George eat an apple, press <kbd><kbd>Shift</kbd>+<kbd>F3</kbd></kbd></p>
+      <p>
+        To make George eat an apple, select
+        <kbd>
+          <kbd>
+            <samp>File</samp>
+          </kbd>|
+          <kbd>
+            <samp>Eat Apple...</samp>
+          </kbd>
+        </kbd>
+      </p>
+    </section>
+  </main>
+
+  <main id=todo hidden>
+    <section>
+
+      <h1>TODO</h1>
+      <p>Last edited: <time datetime="2020-05-03">2020-05-03</time></p>
+      <ul>
+        <li><del>Make it able to switch main article</del></li>
+        <li><del>Make thaumatorium.com functional</del></li>
+        <li>Center the main content</li>
+        <li>Create Mocking Spongebob generator</li>
+        <li>Create ROT13 generator</li>
+        <li>Make thaumatorium.com look good</li>
+        <li>Transfer my articles from my ye olde wordpress site</li>
+      </ul>
+    </section>
+  </main>
+
+  <main id=art-example hidden>
+    <section>
+      <h1>Example article</h1>
+      Published: <time>2020-05-01</time>
+      Author: <span>NostraDavid</span>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Consectetur adipisicing elit. Praesentium, placeat!</p>
+    </section>
+  </main>
+
+  <main id=art-blog hidden>
+    <section>
+      <article>
+        <h2>The blog</h2>
+        <p> Here comes the blog</p>
+      </article>
+      <article>
+        <h2>
+          HOW TO GET PAGESPEED INFORMATION ON THE COMMANDLINE
+        </h2>
+      </article>
+    </section>
+  </main>
+
+  <main id=about hidden>
+    <section>
+      <h1>About</h1>
+      <h2>Thaumatorium</h2>
+      <p>Based on the word <i>thaumaturge</i>, meaning <i>miracle worker</i></p>
+      <h2>The author</h2>
+      <p>I'm someone who's sick of the state of the web and you know what they say: </p>
+      <blockquote>Improve the world, start with yourself - <a href="https://nl.wikipedia.org/wiki/Bond_zonder_Naam">Bond
+          Zonder Naam</a></blockquote>
+      <p>This is why I started with the basics: HTML, CSS and JS. Anything else is deemed <i>bloat</i></p>
+      <section class="about">
+        <h1>About Thaumatorium</h1>
+        We are:
+        <ul>
+          <li>Dutch</li>
+          <li>Smart</li>
+          <li>Tall</li>
+          <li>Cheese lovers (well, some of us are)</li>
+          <li>Not nearly as America-philes as we used to be</li>
+          <li>Sick of bloat in software</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <main id=PraetorianPi hidden>
+    <section>
+      <p style="text-align: left;">If you don't know what this page is about: Go watch <a
+          href="https://www.imdb.com/title/tt0113957/?ref_=fn_al_tt_1">The Net (1995)</a>! It's a perfect 90's movie and
+        if you liked <a href="https://www.imdb.com/title/tt0113243/?ref_=fn_al_tt_1">Hackers (1995)</a> you'll like this
+        one.<br>
+        Or just click the image below<br>
+        Or search the internet for "Praetorian Pi"</p>
+      <a href="https://www.youtube.com/watch?v=pXPXMxsXT28"><img src="/images/clever.jpg"
+          alt="The bad guy from the 'The Net' saying 'clever girl'" /></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      &copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+      &ndash; <a href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">
+        <script>
+          document.write(new Date().getFullYear() + 10000);
+        </script>
+      </a>, <abbr
+        title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'"
+        style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+
+    </div>
+    <!-- Sssh - don't tell anyone! -->
+    <a class="secret" onclick=gotoSpecialArticle(event)
+      style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
+  </footer>
+
+  <script>
+    const gotoArticle = (hash) => {
+      let articleId = hash.replace("#", "") || "home";
+      // hide ALL mains
+      document.querySelectorAll("main").forEach(el => { el.hidden = true });
+      // unhide the one you need
+      document.getElementById(articleId).hidden = false;
+    }
+
+    const gotoSpecialArticle = (event) => {
+      if (event.ctrlKey && event.shiftKey) {
+        window.location = "#PraetorianPi";
+        gotoArticle("#PraetorianPi")
+      }
+    }
+
+    gotoArticle(window.location.hash)
+  </script>
+</body>
+
+</html>

@@ -9,3 +9,9 @@ body {
   /* remove weird outer margin */
   margin: 0;
 }
+
+img {
+  /* prevent lazy loading images from reflowing the site */
+  max-width: 100%;
+  height: auto;
+}

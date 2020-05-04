@@ -19,7 +19,7 @@ body > header h2 {
   text-transform: uppercase;
 }
 
-/* Override only the size of h2  */
+/* Override only the size of h2	*/
 body > header h2 {
   font-size: 1.2em;
 }

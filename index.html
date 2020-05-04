@@ -23,11 +23,11 @@
   <!-- manifest.json is currently only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
   <link rel=manifest href=/manifest.json />
   <link rel=icon href=/images/favicon.svg />
-  <link defer rel=stylesheet href=styles/layout.css />
-  <link defer rel=stylesheet href=styles/header.css />
-  <link defer rel=stylesheet href=styles/nav.css />
-  <link defer rel=stylesheet href=styles/main.css />
-  <link defer rel=stylesheet href=styles/footer.css />
+  <link async rel=stylesheet href=styles/layout.css />
+  <link async rel=stylesheet href=styles/header.css />
+  <link async rel=stylesheet href=styles/nav.css />
+  <link async rel=stylesheet href=styles/main.css />
+  <link async rel=stylesheet href=styles/footer.css />
 </head>
 
 <body>
@@ -63,8 +63,8 @@
         nonsense.
       </p>
       <p><strong>Disclaimer:</strong> I'm not perfect, so this file <em>will likely</em> contain mistakes. If you find
-        any, please open a <a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues"
-          alt="Github Issue">Github Issue</a>, whether it's just a spelling mistake or something wrong with the HTML.
+        any, please open a <a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues">Github Issue</a>,
+        whether it's just a spelling mistake or something wrong with the HTML.
       </p>
       <p>
         We are based in the Netherlands. We like to take an unnormal take on
@@ -87,7 +87,6 @@
 
   <main id=projects hidden>
     <section>
-
       <h1>Ongoing projects</h1>
       <section>
         <h1>Thaumatorium.com</h1>
@@ -148,6 +147,8 @@
       <ul>
         <li><del>Make it able to switch main article</del></li>
         <li><del>Make thaumatorium.com functional</del></li>
+        <li>Turn the main tags into articles and stick them all into a &lt;main&gt;, perhaps that gets the layout
+          working</li>
         <li>Center the main content</li>
         <li>Create Mocking Spongebob generator</li>
         <li>Create ROT13 generator</li>
@@ -169,15 +170,13 @@
 
   <main id=art-blog hidden>
     <section>
-      <article>
-        <h2>The blog</h2>
-        <p> Here comes the blog</p>
-      </article>
-      <article>
+      <h1>The blog</h1>
+      <p> Here comes the blog</p>
+      <section>
         <h2>
           HOW TO GET PAGESPEED INFORMATION ON THE COMMANDLINE
         </h2>
-      </article>
+      </section>
     </section>
   </main>
 
@@ -207,16 +206,14 @@
   </main>
 
   <main id=PraetorianPi hidden>
-    <section>
-      <p style="text-align: left;">If you don't know what this page is about: Go watch <a
-          href="https://www.imdb.com/title/tt0113957/?ref_=fn_al_tt_1">The Net (1995)</a>! It's a perfect 90's movie and
-        if you liked <a href="https://www.imdb.com/title/tt0113243/?ref_=fn_al_tt_1">Hackers (1995)</a> you'll like this
-        one.<br>
-        Or just click the image below<br>
-        Or search the internet for "Praetorian Pi"</p>
-      <a href="https://www.youtube.com/watch?v=pXPXMxsXT28"><img src="/images/clever.jpg"
-          alt="The bad guy from the 'The Net' saying 'clever girl'" /></a>
-    </section>
+    <p style="text-align: left;">If you don't know what this page is about: Go watch <a
+        href="https://www.imdb.com/title/tt0113957/?ref_=fn_al_tt_1">The Net (1995)</a>! It's a perfect 90's movie and
+      if you liked <a href="https://www.imdb.com/title/tt0113243/?ref_=fn_al_tt_1">Hackers (1995)</a> you'll like this
+      one.<br>
+      Or just click the image below<br>
+      Or search the internet for "Praetorian Pi"</p>
+    <a href="https://www.youtube.com/watch?v=pXPXMxsXT28"><img src="/images/clever.jpg"
+        alt="The bad guy from the 'The Net' saying 'clever girl'" /></a>
   </main>
 
   <footer>

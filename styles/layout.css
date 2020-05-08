@@ -1,17 +1,17 @@
 /* Layout.css is basically for anything that doesn't fit the other files */
 
 * {
-  /* show CSS' box model */
-  /* border: 1px dotted black; */
+	/* show CSS' box model */
+	/* border: 1px dotted black; */
 }
 
 body {
-  /* remove weird outer margin */
-  margin: 0;
+	/* remove weird outer margin */
+	margin: 0;
 }
 
 img {
-  /* prevent lazy loading images from reflowing the site */
-  max-width: 100%;
-  height: auto;
+	/* prevent lazy loading images from reflowing the site */
+	max-width: 100%;
+	height: auto;
 }

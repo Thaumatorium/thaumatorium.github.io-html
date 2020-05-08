@@ -1,29 +1,29 @@
 :root {
-  --main-color-tint2: #d40000;
-  --main-color-tint1: #940000;
-  --main-color-halftint: #9a2121;
-  --main-color: #800;
-  --main-color-shade1: #6e0000;
-  --main-color-shade2: #470000;
+	--main-color-tint2: #d40000;
+	--main-color-tint1: #940000;
+	--main-color-halftint: #9a2121;
+	--main-color: #800;
+	--main-color-shade1: #6e0000;
+	--main-color-shade2: #470000;
 }
 
-body > nav * {
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  text-decoration: none;
-  padding: 6px;
-  font: 14px Arial, sans-serif;
+body>nav * {
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	text-decoration: none;
+	padding: 6px;
+	font: 14px Arial, sans-serif;
 }
 
-body > nav *:hover {
-  color: #800;
-  background-color: #fff;
-  text-decoration: underline;
+body>nav *:hover {
+	color: #800;
+	background-color: #fff;
+	text-decoration: underline;
 }
 
-body > nav {
-  background-color: var(--main-color-tint1);
-  padding: 6px;
-  text-align: center;
+body>nav {
+	background-color: var(--main-color-tint1);
+	padding: 6px;
+	text-align: center;
 }

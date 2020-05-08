@@ -1,27 +1,27 @@
 :root {
-  --main-color-tint2: #d40000;
-  --main-color-tint1: #940000;
-  --main-color-halftint: #9a2121;
-  --main-color: #800;
-  --main-color-shade1: #6e0000;
-  --main-color-shade2: #470000;
+	--main-color-tint2: #d40000;
+	--main-color-tint1: #940000;
+	--main-color-halftint: #9a2121;
+	--main-color: #800;
+	--main-color-shade1: #6e0000;
+	--main-color-shade2: #470000;
 }
 
-body > footer {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas: "copyright . secret";
+body>footer {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-areas: "copyright . secret";
 }
 
-body > footer .copyright {
-  grid-area: copyright;
+body>footer .copyright {
+	grid-area: copyright;
 }
 
-body > footer .secret {
-  grid-area: secret;
+body>footer .secret {
+	grid-area: secret;
 }
 
-body > footer {
-  border-top: 10px solid var(--main-color-halftint);
-  padding: 30px;
+body>footer {
+	border-top: 10px solid var(--main-color-halftint);
+	padding: 30px;
 }

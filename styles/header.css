@@ -1,31 +1,30 @@
-/* The header self */
-body > header {
-  padding: 50px 0 30px 0;
-  text-align: center;
-  background: #800;
+body>header {
+	/* The header self */
+	padding: 50px 0 30px 0;
+	text-align: center;
+	background: #800;
 }
 
-/* All items within the header */
-body > header * {
-  margin: 0;
-  padding: 0;
-  color: #fff;
+body>header * {
+	/* All items within the header */
+	margin: 0;
+	padding: 0;
+	color: #fff;
 }
 
-/* Only the headings */
-body > header h1,
-body > header h2 {
-  font: 2em "Times New Roman", Times, serif;
-  text-transform: uppercase;
+body>header h1, body>header h2 {
+	/* Only the headings */
+	font: 2em "Times New Roman", Times, serif;
+	text-transform: uppercase;
 }
 
-/* Override only the size of h2	*/
-body > header h2 {
-  font-size: 1.2em;
+body>header h2 {
+	/* Override only the size of h2	*/
+	font-size: 1.2em;
 }
 
-body > header h2::first-letter {
-  /* Remember that em is relative to what's inherited */
-  /* This is basically 120% of the cascaded value */
-  font-size: 1.2em;
+body>header h2::first-letter {
+	/* Remember that em is relative to what's inherited */
+	/* This is basically 120% of the cascaded value */
+	font-size: 1.2em;
 }

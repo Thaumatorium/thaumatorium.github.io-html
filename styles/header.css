@@ -12,15 +12,14 @@ body>header * {
 	color: #fff;
 }
 
-body>header h1, body>header h2 {
-	/* Only the headings */
+body>header .title {
 	font: 2em "Times New Roman", Times, serif;
 	text-transform: uppercase;
 }
 
-body>header h2 {
-	/* Override only the size of h2	*/
-	font-size: 1.2em;
+body>header .subtitle {
+	font: 1.2em "Times New Roman", Times, serif;
+	text-transform: uppercase;
 }
 
 body>header h2::first-letter {

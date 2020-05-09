@@ -1,8 +1,8 @@
-/* Layout.css is basically for anything that doesn't fit the other files */
+/* Layout.css is for layout changes, when the window becomes smaller than a certain width, for example. */
 
 * {
   /* show CSS' box model */
-  border: 1px dotted black;
+  /* border: 1px dotted black; */
 }
 
 body {
@@ -20,15 +20,13 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   /* grid-template-rows: 1fr auto auto 0.5fr; */
-  grid-template-areas:
-  "banner banner banner"
-  "menu-bar menu-bar menu-bar"
-  ". main ."
-  "footer footer footer";
+  grid-template-areas: "banner banner banner" "menu-bar menu-bar menu-bar" ". main ." "footer footer footer";
 }
 
 body>header {
   grid-area: banner;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -45,9 +43,10 @@ body>footer {
 }
 
 @media (max-width: 720px) {
-  header #logo {
-    float: left;
-    text-align: left;
+  body>header {
+    /* No clue why it wouldn't override padding, without !important */
+    padding: 0 !important;
+    flex-direction: row;
   }
 
   body {

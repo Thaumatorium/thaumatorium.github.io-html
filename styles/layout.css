@@ -19,7 +19,7 @@ img {
 body {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr auto auto 0.5fr;
+  /* grid-template-rows: 1fr auto auto 0.5fr; */
   grid-template-areas:
     "banner banner banner"
     "menu-bar menu-bar menu-bar"
@@ -42,4 +42,15 @@ body>main {
 
 body>footer {
   grid-area: footer;
+}
+
+@media (max-width: 720px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "banner banner banner"
+    "menu-bar menu-bar menu-bar"
+    "main main main"
+    "footer footer footer";
+  }
 }

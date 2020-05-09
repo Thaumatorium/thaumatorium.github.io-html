@@ -1,19 +1,19 @@
 /* Layout.css is basically for anything that doesn't fit the other files */
 
 * {
-	/* show CSS' box model */
-	/* border: 1px dotted black; */
+  /* show CSS' box model */
+  border: 1px dotted black;
 }
 
 body {
-	/* remove weird outer margin */
-	margin: 0;
+  /* remove weird outer margin */
+  margin: 0;
 }
 
 img {
-	/* prevent lazy loading images from reflowing the site */
-	max-width: 100%;
-	height: auto;
+  /* prevent lazy loading images from reflowing the site */
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -21,10 +21,10 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   /* grid-template-rows: 1fr auto auto 0.5fr; */
   grid-template-areas:
-    "banner banner banner"
-    "menu-bar menu-bar menu-bar"
-    ". main ."
-    "footer footer footer";
+  "banner banner banner"
+  "menu-bar menu-bar menu-bar"
+  ". main ."
+  "footer footer footer";
 }
 
 body>header {
@@ -45,12 +45,13 @@ body>footer {
 }
 
 @media (max-width: 720px) {
+  header #logo {
+    float: left;
+    text-align: left;
+  }
+
   body {
     grid-template-columns: 1fr;
-    grid-template-areas:
-    "banner banner banner"
-    "menu-bar menu-bar menu-bar"
-    "main main main"
-    "footer footer footer";
+    grid-template-areas: "banner banner banner" "menu-bar menu-bar menu-bar" "main main main" "footer footer footer";
   }
 }

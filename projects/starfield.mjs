@@ -19,7 +19,7 @@ const star_color_range = [
   { r: 227, g: 13, b: 21 },
 ];
 // speed slider
-const speed = 0.1;
+const speed = 0.3;
 
 // generate a random double between min and max
 const rand = (min, max) => Math.random() * (+max - +min) + +min;

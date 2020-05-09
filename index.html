@@ -44,177 +44,15 @@
 	<nav>
 		<!-- `this` refers to the anchor element. `hash` refers to the `#xxxx` of the `href` attribute -->
 		<!-- You can't use `this.href`, because that returns the full URL and we only want the hash -->
-		<a onclick=gotoArticle(this.hash) href=#home>Home</a>
-		<a onclick=gotoArticle(this.hash) href=#articles>Articles</a>
-		<a onclick=gotoArticle(this.hash) href=#projects>Projects</a>
-		<a onclick=gotoArticle(this.hash) href=#experimentations>Experimentations</a>
-		<a onclick=gotoArticle(this.hash) href=#todo>TODO</a>
-		<a onclick=gotoArticle(this.hash) href=#about>About</a>
+		<a onclick=goto(this.hash)>Frontpage</a>
+		<a onclick=goto(this.hash) href=#Articles>Articles</a>
+		<a onclick=goto(this.hash) href=#Projects>Projects</a>
+		<a onclick=goto(this.hash) href=#Experimentations>Experimentations</a>
+		<a onclick=goto(this.hash) href=#TODO>TODO</a>
+		<a onclick=goto(this.hash) href=#About>About</a>
 	</nav>
 
-	<main id=home hidden>
-		<section>
-			<h1>Welcome to the Thaumatorium!</h1>
-			<p>Beepity boop, shoop da whoop!</p>
-			<p><strong>Note:</strong> You can check out the source of this page to see how HTML/CSS is <em>supposed</em> to be
-				used.<br>
-				As an example on how <em>not</em> to do HTML, take a look at Twitter with their
-				<code>&lt;div&gt;&lt;div&gt;&lt;div&gt;divs&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code>
-				nonsense.
-			</p>
-			<p><strong>Disclaimer:</strong> I'm not perfect, so this file <em>will likely</em> contain mistakes. If you find
-				any, please open a <a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues">Github Issue</a>,
-				whether it's just a spelling mistake or something wrong with the HTML.
-			</p>
-			<p>
-				We are based in the Netherlands. We like to take an unnormal take on
-				things: Take a look at what the masses are doing, learning from them
-				by NOT doing that and finding out where the good shit is at!
-			</p>
-			<p>
-				That doesn't mean that popular = bad. We just hate JavaScript and its
-				ecology. Damn JavaScript.
-			</p>
-		</section>
-	</main>
-
-	<main id=articles hidden>
-		<section>
-			<h1><a onclick=gotoArticle(this.hash) href=#art-example>An example article</a></h1>
-			<h1><a onclick=gotoArticle(this.hash) href=#art-blog>Another blog</a></h1>
-		</section>
-	</main>
-
-	<main id=projects hidden>
-		<section>
-			<h1>Ongoing projects</h1>
-			<section>
-				<h1>Thaumatorium.com</h1>
-				<p>This site!</p>
-			</section>
-			<section>
-				<h1><abbr title="Semantic Override Network">SON</abbr></h1>
-				<p>A news aggregator that will pierce the stars!</p>
-			</section>
-			<h2>Projects created by members of the Thaumatorium</h2>
-			<p>What they are, were written in, how to run them, etc.</p>
-			<article>
-				<h3>Semantic Override Network</h3>
-				<p>An idea that formed over 4 years, slowly taking form over the years...</p>
-				<h4>Why use SON</h4>
-				<p>Because you can use it to share webpages, whether it's a news article, meme (text or image), video, music, or
-					app, save them, export them, and best of all: find related things. Got a low-res version of a meme? Upload it
-					to
-					Imgur, post it on SON, fill in some data and see if a higher res version pops up! Read an article where you
-					wonder if someone reacted to it? Find it on SON and check it out!</p>
-			</article>
-		</section>
-	</main>
-
-	<main id=experimentations hidden>
-		<section>
-			<h1>HTML/CSS/JS experimentations go here</h1>
-			<p style="font-family:'Times New Roman', Times, serif">test</p>
-			<p style="font-family: monospace">test</p>
-			<time>2019-11-29</time>
-			<figure>
-				<figcaption>
-					Using Pythagoras' theorem to solve for the hypotenuse
-					<var>a</var> of a triangle with sides <var>b</var> and
-					<var>c</var>
-				</figcaption>
-			</figure>
-			<p>To make George eat an apple, press <kbd><kbd>Shift</kbd>+<kbd>F3</kbd></kbd></p>
-			<p>
-				To make George eat an apple, select
-				<kbd>
-					<kbd>
-						<samp>File</samp>
-					</kbd>|
-					<kbd>
-						<samp>Eat Apple...</samp>
-					</kbd>
-				</kbd>
-			</p>
-		</section>
-	</main>
-
-	<main id=todo hidden>
-		<section>
-
-			<h1>TODO</h1>
-			<p>Last edited: <time datetime="2020-05-03">2020-05-03</time></p>
-			<ul>
-				<li><del>Make it able to switch main article</del></li>
-				<li><del>Make thaumatorium.com functional</del></li>
-				<li>Turn the main tags into articles and stick them all into a &lt;main&gt;, perhaps that gets the layout
-					working</li>
-				<li>Center the main content</li>
-				<li>Create Mocking Spongebob generator</li>
-				<li>Create ROT13 generator</li>
-				<li>Make thaumatorium.com look good</li>
-				<li>Transfer my articles from my ye olde wordpress site</li>
-			</ul>
-		</section>
-	</main>
-
-	<main id=art-example hidden>
-		<section>
-			<h1>Example article</h1>
-			Published: <time>2020-05-01</time>
-			Author: <span>NostraDavid</span>
-			<p>Lorem ipsum dolor sit amet.</p>
-			<p>Consectetur adipisicing elit. Praesentium, placeat!</p>
-		</section>
-	</main>
-
-	<main id=art-blog hidden>
-		<section>
-			<h1>The blog</h1>
-			<p> Here comes the blog</p>
-			<section>
-				<h2>
-					HOW TO GET PAGESPEED INFORMATION ON THE COMMANDLINE
-				</h2>
-			</section>
-		</section>
-	</main>
-
-	<main id=about hidden>
-		<section>
-			<h1>About</h1>
-			<h2>Thaumatorium</h2>
-			<p>Based on the word <i>thaumaturge</i>, meaning <i>miracle worker</i></p>
-			<h2>The author</h2>
-			<p>I'm someone who's sick of the state of the web and you know what they say: </p>
-			<blockquote>Improve the world, start with yourself - <a href="https://nl.wikipedia.org/wiki/Bond_zonder_Naam">Bond
-					Zonder Naam</a></blockquote>
-			<p>This is why I started with the basics: HTML, CSS and JS. Anything else is deemed <i>bloat</i></p>
-			<section class="about">
-				<h1>About Thaumatorium</h1>
-				We are:
-				<ul>
-					<li>Dutch</li>
-					<li>Smart</li>
-					<li>Tall</li>
-					<li>Cheese lovers (well, some of us are)</li>
-					<li>Not nearly as America-philes as we used to be</li>
-					<li>Sick of bloat in software</li>
-				</ul>
-			</section>
-		</section>
-	</main>
-
-	<main id=PraetorianPi hidden>
-		<p style="text-align: left;">If you don't know what this page is about: Go watch <a
-				href="https://www.imdb.com/title/tt0113957/?ref_=fn_al_tt_1">The Net (1995)</a>! It's a perfect 90's movie and
-			if you liked <a href="https://www.imdb.com/title/tt0113243/?ref_=fn_al_tt_1">Hackers (1995)</a> you'll like this
-			one.<br>
-			Or just click the image below<br>
-			Or search the internet for "Praetorian Pi"</p>
-		<a href="https://www.youtube.com/watch?v=pXPXMxsXT28"><img src="/images/clever.webp" loading=lazy
-				alt="The bad guy from the 'The Net' saying 'clever girl'" /></a>
-	</main>
+	<main></main>
 
 	<footer>
 		<div class="copyright">
@@ -229,27 +67,45 @@
 
 		</div>
 		<!-- Sssh - don't tell anyone! -->
-		<a class="secret" onclick=gotoSpecialArticle(event)
+		<a class="secret" onclick=specialGoto(event)
 			style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
 	</footer>
 
 	<script>
-		const gotoArticle = (hash) => {
-			let articleId = hash.replace("#", "") || "home";
-			// hide ALL mains
-			document.querySelectorAll("main").forEach(el => { el.hidden = true });
-			// unhide the one you need
-			document.getElementById(articleId).hidden = false;
+		// Previously, every article and page existed in index.html, which made this file 256 lines big. As of now, it's 109
+		const goto = (hash) => {
+			const map = {
+				"": "/pages/frontpage.html",
+				"#Frontpage": "/pages/frontpage.html",
+				"#Projects": "/pages/projects.html",
+				"#Experimentations": "/pages/experimentations.html",
+				"#TODO": "/pages/todo.html",
+				"#About": "/pages/about.html",
+				"#Articles": "/pages/articles.html",
+				"#Example": "/articles/example.html",
+				"#Blog": "/articles/blog.html",
+				"#Starfield": "/projects/starfield.html",
+			}
+			fetch(map[hash]).then(response => {
+				// window.history.pushState({ "html": response.html, "pageTitle": response.pageTitle }, "test", hash);
+				// window.location = hash;
+				return response.text();
+			}).then(html => {
+				const el = document.querySelector("body>main");
+				el.innerHTML = html;
+			}).catch(err => {
+				console.warn('Something went wrong.', err);
+			});
 		}
 
-		const gotoSpecialArticle = (event) => {
+		const specialGoto = (event) => {
 			if (event.ctrlKey && event.shiftKey) {
 				window.location = "#PraetorianPi";
-				gotoArticle("#PraetorianPi")
+				goto("/pages/praetorianpi.html")
 			}
 		}
 
-		gotoArticle(window.location.hash)
+		goto(window.location.hash)
 	</script>
 </body>
 

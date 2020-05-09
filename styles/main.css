@@ -18,6 +18,10 @@ body>main a {
 	color: #800;
 }
 
+body>main p {
+	margin: 0 0 5px 0;
+}
+
 body>main figure {
 	border: 1px solid #800;
 	padding: 10px;

@@ -33,8 +33,8 @@
 <body>
 	<header id=banner>
 		<a href="/">
-			<img loading=lazy src="/images/Thaumatorium.svg" alt="main logo consisting of a checkerboard pattern" height="111"
-				width="111" />
+			<img loading=lazy height=111 width=111 src="/images/Thaumatorium.svg"
+				alt="main logo consisting of a checkerboard pattern" />
 		</a>
 		<div class=title>The Thaumatorium:</div>
 		<div class=subtitle>Where the magic happens</div>
@@ -45,16 +45,16 @@
 	<nav>
 		<!-- `this` refers to the anchor element. `hash` refers to the `#xxxx` of the `href` attribute -->
 		<!-- You can't use `this.href`, because that returns the full URL and we only want the hash -->
-		<a onclick=goto(this.hash)>Frontpage</a>
-		<a onclick=goto(this.hash) href=#Articles>Articles</a>
-		<a onclick=goto(this.hash) href=#Projects>Projects</a>
-		<a onclick=goto(this.hash) href=#Experimentations>Experimentations</a>
-		<a onclick=goto(this.hash) href=#TODO>TODO</a>
-		<a onclick=goto(this.hash) href=#About>About</a>
+		<a onclick=goto(this.hash) href>Frontpage</a>
+		<a onclick=goto(this.hash) href=#articles>Articles</a>
+		<a onclick=goto(this.hash) href=#projects>Projects</a>
+		<a onclick=goto(this.hash) href=#experimentations>Experimentations</a>
+		<a onclick=goto(this.hash) href=#todo>TODO</a>
+		<a onclick=goto(this.hash) href=#about>About</a>
 	</nav>
 
 	<main></main>
-
+	<script id=dynamic-script type="module"></script>
 	<footer>
 		<div class="copyright">
 			&copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
@@ -74,26 +74,39 @@
 
 	<script>
 		// Previously, every article and page existed in index.html, which made this file 256 lines big. As of now, it's 109
-		const goto = (hash) => {
-			const map = {
-				"": "/pages/frontpage.html",
-				"#Frontpage": "/pages/frontpage.html",
-				"#Projects": "/pages/projects.html",
-				"#Experimentations": "/pages/experimentations.html",
-				"#TODO": "/pages/todo.html",
-				"#About": "/pages/about.html",
-				"#Articles": "/pages/articles.html",
-				"#Example": "/articles/example.html",
-				"#Blog": "/articles/blog.html",
-				"#Starfield": "/projects/starfield.html",
+		/**
+		 * 
+		 */
+		const goto = (hash, hasScript = false) => {
+			// Stick in a hash, get out the page's path
+			const hashToPageMap = {
+				"": { path: "/pages/frontpage.html", js: false },
+				"#frontpage": { path: "/pages/frontpage.html", js: false },
+				"#projects": { path: "/pages/projects.html", js: false },
+				"#praetorianpi": { path: "/pages/praetorianpi.html", js: false },
+				"#experimentations": { path: "/pages/experimentations.html", js: false },
+				"#todo": { path: "/pages/todo.html", js: false },
+				"#about": { path: "/pages/about.html", js: false },
+				"#articles": { path: "/pages/articles.html", js: false },
+				// articles
+				"#example": { path: "/articles/example.html", js: false },
+				"#blog": { path: "/articles/blog.html", js: false },
+				// projects
+				"#starfield": { path: "/projects/starfield.html", js: true },
+				"#mstg": { path: "/projects/mockingspongebob.html", js: false },
+				"#rot13": { path: "/projects/rot13.html", js: false },
 			}
-			fetch(map[hash]).then(response => {
-				// window.history.pushState({ "html": response.html, "pageTitle": response.pageTitle }, "test", hash);
-				// window.location = hash;
+			let data = hashToPageMap[hash];
+			fetch(data.path).then(response => {
 				return response.text();
 			}).then(html => {
 				const el = document.querySelector("body>main");
 				el.innerHTML = html;
+				if (data.js) {
+					let el = document.getElementById("dynamic-script");
+					let module = `${data.path.split(".")[0]}.mjs`;
+					el.setAttribute("src", module);
+				}
 			}).catch(err => {
 				console.warn('Something went wrong.', err);
 			});

@@ -1,0 +1,20 @@
+<section>
+  <h2>Splitting JS/CSS into 2 or 3 files</h2>
+  <p>Published: <time datetime=2019-11-29>2019-11-29</time></p>
+  <p>Author: <span>NostraDavid</span></p>
+
+  <p>Context: Checking Coverage with Chrome Devtools – https://developers.google.com/web/tools/chrome-devtools/coverage
+  </p>
+  <p>After checking coverage, split the JS/CSS up into:</p>
+
+  <ul>
+    <li>InnerCore (inline JS/CSS, needed for when the JS/CSS files don’t load on super slow connections)</li>
+    <li>OuterCore (the JS/CSS that’s covered by Devtools)</li>
+    <li>Mantle (the JS/CSS that’s NOT covered by Devtools, but can be potentially used by the site)</li>
+  </ul>
+
+  <p>Do all of this programmatically, because you do NOT want to do this by hand.</p>
+  <p>Names are based on Earth: https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg</p>
+
+
+</section>

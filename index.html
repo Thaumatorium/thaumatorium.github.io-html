@@ -60,7 +60,6 @@
 	</nav>
 
 	<main></main>
-	<script id=dynamic-script type="module"></script>
 	<footer>
 		<div class="copyright">
 			&copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
@@ -121,9 +120,21 @@
 				const el = document.querySelector("body>main");
 				el.innerHTML = html;
 				if (data.js) {
-					let el = document.getElementById("dynamic-script");
-					let module = `${data.path.split(".")[0]}.mjs`;
-					el.setAttribute("src", module);
+					// remove any existing script
+					let ds = document.getElementById("dynamic-script")
+					if(ds) {
+						ds.parentElement.removeChild(ds);
+					}
+					// generate new one
+					let script_tag = document.createElement('script');
+					let src_path = `${data.path.split(".")[0]}.mjs`;
+					script_tag.setAttribute("id", "dynamic-script");
+					script_tag.setAttribute("type", "module");
+					script_tag.setAttribute("src", src_path);
+
+					// add it to html
+					let body = document.getElementsByTagName("body")[0];
+					body.appendChild(script_tag);
 				}
 			}).catch(err => {
 				console.warn('Something went wrong.', err);

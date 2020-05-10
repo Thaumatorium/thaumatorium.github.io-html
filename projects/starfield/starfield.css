@@ -3,8 +3,12 @@ section>canvas {
   width: 100%;
 }
 
-section#pause {
+section #pause {
   background: #fff;
   color: red;
   float: left;
+}
+
+section #starfield {
+  box-shadow: 1px 1px 2px gray;
 }

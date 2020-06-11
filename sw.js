@@ -50,29 +50,13 @@ self.addEventListener('install', function(event) {
 				'/pages/wc4.png',
 				'/pages/wc5.png',
 			
-				// Projects
-				'/projects/base64/base64.css',
-				'/projects/base64/base64.html',
-				'/projects/base64/base64.mjs',
-				'/projects/mstg/mstg.css',
-				'/projects/mstg/mstg.html',
-				'/projects/mstg/mstg.mjs',
-				'/projects/rot13/rot13.css',
-				'/projects/rot13/rot13.html',
-				'/projects/rot13/rot13.mjs',
-				'/projects/slugify/slugify.css',
-				'/projects/slugify/slugify.html',
-				'/projects/slugify/slugify.mjs',
-				'/projects/starfield/starfield.css',
-				'/projects/starfield/starfield.html',
-				'/projects/starfield/starfield.mjs',
-			
 				// CSS
 				'/styles/footer.css',
 				'/styles/header.css',
 				'/styles/layout.css',
 				'/styles/main.css',
-				'/styles/nav.css'
+				'/styles/nav.css',
+				'/styles/projects.css'
 			]);
     })
   );

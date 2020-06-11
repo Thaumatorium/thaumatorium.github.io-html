@@ -1,4 +1,3 @@
-console.log("running rot13.mjs")
 let input = document.getElementById("rot13_in");
 let output = document.getElementById("rot13_out");
 

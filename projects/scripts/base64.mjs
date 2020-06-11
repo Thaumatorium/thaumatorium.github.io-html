@@ -1,4 +1,4 @@
-console.log("running base64.mjs")
+("running base64.mjs")
 let in_encode = document.getElementById("base64_in_encode");
 let out_encode = document.getElementById("base64_out_encode");
 let in_decode = document.getElementById("base64_in_decode");

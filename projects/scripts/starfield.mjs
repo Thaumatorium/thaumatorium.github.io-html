@@ -1,5 +1,3 @@
-console.log("running starfield.mjs")
-
 const context = window.starfield.getContext("2d");
 let height = document.documentElement.clientHeight;
 let width = document.documentElement.clientWidth;

@@ -1,4 +1,3 @@
-console.log("running slugify.mjs")
 let input = document.getElementById("slugify_in");
 let output = document.getElementById("slugify_out");
 

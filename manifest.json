@@ -33,7 +33,7 @@
 	"background_color": "#880000",
 	"display": "minimal-ui",
 	"scope": "/",
-	"start_url": "/",
+	"start_url": "/index.html",
 	"lang": "en-GB",
 	"dir": "auto",
 	"orientation": "any"

@@ -9,8 +9,8 @@
 
 body>footer {
 	display: grid;
-	grid-template-columns: auto 1fr auto;
 	grid-template-areas: "copyright . secret";
+	grid-template-columns: auto 1fr auto;
 }
 
 body>footer .copyright {

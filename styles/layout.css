@@ -12,21 +12,20 @@ body {
 
 img {
 	/* prevent lazy loading images from reflowing the site */
-	max-width: 100%;
 	height: auto;
+	max-width: 100%;
 }
 
 body {
 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	/* grid-template-rows: 1fr auto auto 0.5fr; */
 	grid-template-areas: "banner banner banner" "menu-bar menu-bar menu-bar" ". main ." "footer footer footer";
+	grid-template-columns: 1fr 2fr 1fr;
 }
 
 body>header {
-	grid-area: banner;
 	display: flex;
 	flex-direction: column;
+	grid-area: banner;
 	text-align: center;
 }
 

@@ -1,3 +1,12 @@
+:root {
+	--main-color-tint2: #d40000;
+	--main-color-tint1: #940000;
+	--main-color-halftint: #9a2121;
+	--main-color: #800;
+	--main-color-shade1: #6e0000;
+	--main-color-shade2: #470000;
+}
+
 body>main {
 	/* text-align: center; */
 	padding: 10px 10% 10px 10%;
@@ -10,8 +19,37 @@ body>main * {
 body>main h1, body>main h2, body>main h3, body>main h4, body>main h5, body>main h6 {
 	color: #800;
 	font-family: "Times New Roman", Times, serif;
-	text-transform: uppercase;
 	padding: 10px 0 0 0;
+	text-transform: uppercase;
+}
+
+summary>h1 {
+	display: inline-block;
+}
+
+summary {
+	border-bottom: 1px dashed #800;
+}
+
+blockquote {
+  border-left: 6px solid rgb(136, 0,0,0.4);
+  border: 1px dotted rgb(136, 0,0,0.2);
+  margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "“" "„" "‘" "‚";
+}
+
+blockquote:before {
+  color: rgb(136, 0,0,0.4);
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
 }
 
 body>main a {
@@ -24,7 +62,7 @@ body>main p {
 
 body>main figure {
 	border: 1px solid #800;
+	box-shadow: 1px 1px 2px gray;
 	padding: 10px;
 	text-align: center;
-	box-shadow: 1px 1px 2px gray;
 }

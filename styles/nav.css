@@ -8,17 +8,17 @@
 }
 
 body>nav * {
-	padding: 0;
-	margin: 0;
 	color: #fff;
-	text-decoration: none;
-	padding: 6px;
 	font: 14px Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	padding: 6px;
+	text-decoration: none;
 }
 
 body>nav *:hover {
-	color: #800;
 	background-color: #fff;
+	color: #800;
 	text-decoration: underline;
 }
 

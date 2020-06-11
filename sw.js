@@ -51,13 +51,12 @@ self.addEventListener('install', function(event) {
 				'/pages/wc5.png',
 			
 				// Projects
-				'/projects/scripts/starfield.mjs',
 				'/projects/scripts/base64.mjs',
 				'/projects/scripts/mstg.mjs',
 				'/projects/scripts/rot13.mjs',
 				'/projects/scripts/slugify.mjs',
 				'/projects/scripts/starfield.mjs',
-				
+
 				// CSS
 				'/styles/footer.css',
 				'/styles/header.css',

@@ -65,9 +65,13 @@
 
 	<main>
 		<section>
-			<h1>Types (or classes) of Haskell functions</h1>
-			<p>Published: <time datetime=2018-10-15>2018-10-15</time></p>
-			<p>Author: <span>NostraDavid</span></p>
+			<hgroup>
+				<h1>Types (or classes) of Haskell functions</h1>
+				<div class=article-meta>
+					<div class=article-published>Published:<br><time datetime=2018-10-15>2018-10-15</time></div>
+					<div class=article-author>Author:<br>NostraDavid</div>
+				</div>
+			</hgroup>
 			<p>
 				Slightly annoying that type and class already have a certain meaning in Haskell, but I think you’re smart enough
 				to
@@ -80,7 +84,7 @@
 			</p>
 			<table>
 				<thead>
-					<th>Function typename</th>
+					<th>Type</th>
 					<th>What it does</th>
 					<th>Example code</th>
 				</thead>
@@ -100,16 +104,14 @@
 					<tr>
 						<td>Recursive</td>
 						<td>Like a Pure function, but also calls itself (at least once) with a subset of the original input </td>
-						<td><code>length :: [a] -> Int
-					length (x:xs) = 1 + length xs</code></td>
+						<td><code>length :: [a] -> Int length (x:xs) = 1 + length xs</code></td>
 					</tr>
 					<tr>
 						<td>Curried</td>
 						<td>You can give a function a part of the input to create a new function (
 							imperative languages like C or Python always want all arguments at once)</td>
-						<td><code>timesTwo :: Int -> Int
-					timesTwo = 2 *</code>
-							As you can see, the * operator only has one input – It’s been partially applied!
+						<td><code>timesTwo :: Int -> Int timesTwo = 2 *</code>
+							As you can see, the <code>*</code> operator only has one input – It’s been partially applied!
 							When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets
 							added at the end of the function:
 							<code>timesTwo 3

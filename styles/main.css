@@ -9,7 +9,7 @@
 
 body>main {
 	/* text-align: center; */
-	padding: 10px 10% 10px 10%;
+	padding: 10px 10vw 10px 10vw;
 }
 
 body>main * {
@@ -23,7 +23,7 @@ body>main h1, body>main h2, body>main h3, body>main h4, body>main h5, body>main 
 	text-transform: uppercase;
 }
 
-summary>h1 {
+summary>h1, summary>h2, summary>h3 {
 	display: inline-block;
 }
 
@@ -32,24 +32,24 @@ summary {
 }
 
 blockquote {
-  border-left: 6px solid rgb(136, 0,0,0.4);
-  border: 1px dotted rgb(136, 0,0,0.2);
-  margin: 1.5em 10px;
+	border: 1px dotted rgb(136, 0, 0, 0.2);
+	border-left: 6px solid rgb(136, 0, 0, 0.4);
+	margin: 1.5em 10px;
 	padding: 0.5em 10px;
 	quotes: "“" "„" "‘" "‚";
 }
 
 blockquote:before {
-  color: rgb(136, 0,0,0.4);
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+	color: rgb(136, 0, 0, 0.4);
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.01em;
+	vertical-align: -0.4em;
 }
 
 blockquote p {
-  display: inline;
+	display: inline;
 }
 
 body>main a {
@@ -65,4 +65,36 @@ body>main figure {
 	box-shadow: 1px 1px 2px gray;
 	padding: 10px;
 	text-align: center;
+}
+
+.article-meta {
+	display: flex;
+}
+
+.article-published, .article-author {
+	padding: 10px;
+	background-color: rgb(136, 0, 0, 0.1);
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid #333;
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+}
+
+table th {
+	background-color: #800;
+	border: 1px solid #800;
+	color: #fff;
+	margin: 0;
+	padding: .25em;
+}
+
+table td {
+	border: 1px solid #800;
+	margin: 0;
+	padding: .25em;
+	text-align: left;
+	vertical-align: top;
 }

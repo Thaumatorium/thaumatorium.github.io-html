@@ -19,7 +19,7 @@ img {
 body {
 	display: grid;
 	grid-template-areas: "banner banner banner" "menu-bar menu-bar menu-bar" ". main ." "footer footer footer";
-	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-columns: 1fr min(960px, 2fr), 1fr;
 }
 
 body>header {

@@ -65,9 +65,13 @@
 
 	<main>
 		<section>
-			<h1>Find non-ASCII letters in vscode</h1>
-			<p>Published: <time datetime=2018-04-05>2018-04-05</time></p>
-			<p>Author: <span>NostraDavid</span></p>
+			<hgroup>
+				<h1>Find non-ASCII letters in vscode</h1>
+				<div class=article-meta>
+					<div class=article-published>Published:<br><time datetime=2018-04-05>2018-04-05</time></div>
+					<div class=article-author>Author:<br>NostraDavid</div>
+				</div>
+			</hgroup>
 			<pre><code>([^\x00-\x7F])</code></pre>
 			<p>Paste that into your search (make sure to enable regex search) and it’ll show you any non-ASCII characters.</p>
 			<p>Great for when your teacher gives you Haskell code that contains Unicode, yet packages like Brittany can’t

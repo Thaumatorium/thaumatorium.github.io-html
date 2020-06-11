@@ -65,9 +65,13 @@ For more information: https://www.w3.org/International/questions/qa-html-encodin
 
 	<main>
 		<section>
-			<h1>Find the nth comma via regex</h1>
-			<p>Published: <time datetime=2018-04-05>2018-04-05</time></p>
-			<p>Author: <span>NostraDavid</span></p>
+			<hgroup>
+				<h1>Find the nth comma via regex</h1>
+				<div class=article-meta>
+					<div class=article-published>Published:<br><time datetime=2018-04-05>2018-04-05</time></div>
+					<div class=article-author>Author:<br>NostraDavid</div>
+				</div>
+			</hgroup>
 			<p><code>,(?=(?:[^,]*,){3}[^,]*$)</code></p>
 			<p>Via <a href=https://stackoverflow.com/a/9194889/1102369>https://stackoverflow.com/a/9194889/1102369</a></p>
 			<p>Edit the number in between {} to find the nth comma. You’re welcome</p>

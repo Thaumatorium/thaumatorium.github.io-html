@@ -3,105 +3,107 @@
 <html lang="en-GB">
 
 <head>
-  <!--
-  This file is UTF-8 with BOM (Byte Order Mark) - If you're using a decent editor, you can also see this in the status bar (at the bottom of the window) - 
-  This means that the meta tag with charset=utf8 isn't needed.
-  You could also set Content-Type in the packet header (that's something you should set in your server software)
-  You can use http://validator.w3.org/i18n-checker/ to see if your header encoding to UTF-8
-  For more information: https://www.w3.org/International/questions/qa-html-encoding-declarations#nonutf8
-  -->
-  <!-- <meta charset="utf-8" /> -->
-  <!-- The title of the tab -->
-  <title>Thaumatorium</title>
-  <!-- <base href="https://thaumatorium.com/" /> -->
-  <base href="/" />
-  <!-- This description should show up in Google results -->
-  <meta name=description content="Where the Magic happens" />
-  <!-- Theme color for Android/iOS -->
-  <meta name=theme-color content=#800 />
-  <!-- meta viewport is actually CSS hidden inside your HTML -->
-  <!-- More information https://wiki.whatwg.org/wiki/MetaExtensions#viewport and https://drafts.csswg.org/css-device-adapt/#viewport-meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- manifest.json is currently only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
-  <link rel=manifest href=/manifest.json />
-  <link rel=icon href=/images/favicon.svg />
-  <link async rel=stylesheet href=styles/layout.css />
-  <link async rel=stylesheet href=styles/header.css />
-  <link async rel=stylesheet href=styles/nav.css />
-  <link async rel=stylesheet href=styles/main.css />
-  <link async rel=stylesheet href=styles/footer.css />
+	<!--
+	This file is UTF-8 with BOM (Byte Order Mark) - If you're using a decent editor, you can also see this in the status bar (at the bottom of the window) - 
+	This means that the meta tag with charset=utf8 isn't needed.
+	You could also set Content-Type in the packet header (that's something you should set in your server software)
+	You can use http://validator.w3.org/i18n-checker/ to see if your header encoding to UTF-8
+	For more information: https://www.w3.org/International/questions/qa-html-encoding-declarations#nonutf8
+	-->
+	<!-- <meta charset="utf-8" /> -->
+	<!-- The title of the tab -->
+	<title>Thaumatorium</title>
+	<!-- <base href="https://thaumatorium.com/" /> -->
+	<base href="/" />
+	<!-- This description should show up in Google results -->
+	<meta name=description content="Where the Magic happens" />
+	<!-- Theme color for Android/iOS -->
+	<meta name=theme-color content=#800 />
+	<!-- icon for Apple's hardware -->
+	<link rel="apple-touch-icon" href="/images/icons-192.png">
+	<!-- meta viewport is actually CSS hidden inside your HTML -->
+	<!-- More information https://wiki.whatwg.org/wiki/MetaExtensions#viewport and https://drafts.csswg.org/css-device-adapt/#viewport-meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- manifest.json is currently only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
+	<link rel=manifest href=/manifest.json />
+	<link rel=icon href=/images/favicon.svg />
+	<link async rel=stylesheet href=styles/layout.css />
+	<link async rel=stylesheet href=styles/header.css />
+	<link async rel=stylesheet href=styles/nav.css />
+	<link async rel=stylesheet href=styles/main.css />
+	<link async rel=stylesheet href=styles/footer.css />
 </head>
 
 <body>
-  <header>
-    <div id=banner-logo>
-      <a href="/">
-        <img loading=lazy height=111 width=111 src="/images/Thaumatorium.svg"
-          alt="main logo consisting of a checkerboard pattern" />
-      </a>
-    </div>
-    <div id=banner-text>
-      <h1 class=title>The Thaumatorium:</h1>
-      <div class=subtitle>Where the magic happens</div>
-      <p><sub>Last updated: <time>2020-06-11</time></sub></p>
-      <script>
-        let previousUpdates = ["2020-05-11", "2020-05-09", "2020-05-02"]
-      </script>
-    </div>
-  </header>
+	<header>
+		<div id=banner-logo>
+			<a href="/">
+				<img loading=lazy height=111 width=111 src="/images/Thaumatorium.svg"
+					alt="main logo consisting of a checkerboard pattern" />
+			</a>
+		</div>
+		<div id=banner-text>
+			<h1 class=title>The Thaumatorium:</h1>
+			<div class=subtitle>Where the magic happens</div>
+			<p><sub>Last updated: <time>2020-06-11</time></sub></p>
+			<script>
+				let previousUpdates = ["2020-05-11", "2020-05-09", "2020-05-02"]
+			</script>
+		</div>
+	</header>
 
-  <nav>
-    <!-- `this` refers to the anchor element. `hash` refers to the `#xxxx` of the `href` attribute -->
-    <!-- You can't use `this.href`, because that returns the full URL and we only want the hash -->
-    <a href>Frontpage</a>
-    <a href=pages/articles.html>Articles</a>
-    <a href=pages/projects.html>Projects</a>
-    <a href=pages/experimentations.html>Experimentations</a>
-    <a href=pages/todo.html>TODO</a>
-    <a href=pages/about.html>About</a>
-  </nav>
+	<nav>
+		<!-- `this` refers to the anchor element. `hash` refers to the `#xxxx` of the `href` attribute -->
+		<!-- You can't use `this.href`, because that returns the full URL and we only want the hash -->
+		<a href>Frontpage</a>
+		<a href=pages/articles.html>Articles</a>
+		<a href=pages/projects.html>Projects</a>
+		<a href=pages/experimentations.html>Experimentations</a>
+		<a href=pages/todo.html>TODO</a>
+		<a href=pages/about.html>About</a>
+	</nav>
 
-  <main>
-    <section>
-      <h1>TODO</h1>
-      <p>Last edited: <time datetime="2020-05-09">2020-05-09</time></p>
-      <ul>
-        <li>If you go to <code>#starfield</code>, via <code>#projects</code>, the starfield won't show</li>
-        <li><del>Put each article/blog in a separate file</del></li>
-        <li><del>Make it able to switch main article</del></li>
-        <li><del>Make thaumatorium.com functional</del></li>
-        <li>I broke the browser history (clicking back doesn't "refresh" the page) 😭</li>
-        <li>Add brightness and color to the <code>starfield</code></li>
-        <li><del>Make articles look a bit better</del></li>
-        <li><del>Turn the main tags into articles and stick them all into a &lt;main&gt;, perhaps that gets the layout
-            working</del></li>
-        <li><del>Center the main content</del></li>
-        <li><del>Create Mocking Spongebob generator</del></li>
-        <li><del>Create ROT13 generator</del></li>
-        <li>Gotta check out ARIA tags - they weren't really mentioned on WHATWG's Living Document</li>
-        <li>Gotta check out how to create a sitemap, if necessary. Make sure to include the <a
-            href=https://en.wikipedia.org/wiki/Sitemaps#Element_definitions>necessary tags</a></li>
-        <li>https://en.wikipedia.org/wiki/Site_map</li>
-        <li>https://en.wikipedia.org/wiki/Sitemaps</li>
-        <li>Make thaumatorium.com look good</li>
-        <li>Transfer my articles from my ye olde wordpress site</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <div class="copyright">
-      &copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-      &ndash; <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
-      <abbr
-        title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'"
-        style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+	<main>
+		<section>
+			<h1>TODO</h1>
+			<p>Last edited: <time datetime="2020-05-09">2020-05-09</time></p>
+			<ul>
+				<li>If you go to <code>#starfield</code>, via <code>#projects</code>, the starfield won't show</li>
+				<li><del>Put each article/blog in a separate file</del></li>
+				<li><del>Make it able to switch main article</del></li>
+				<li><del>Make thaumatorium.com functional</del></li>
+				<li>I broke the browser history (clicking back doesn't "refresh" the page) 😭</li>
+				<li>Add brightness and color to the <code>starfield</code></li>
+				<li><del>Make articles look a bit better</del></li>
+				<li><del>Turn the main tags into articles and stick them all into a &lt;main&gt;, perhaps that gets the layout
+						working</del></li>
+				<li><del>Center the main content</del></li>
+				<li><del>Create Mocking Spongebob generator</del></li>
+				<li><del>Create ROT13 generator</del></li>
+				<li>Gotta check out ARIA tags - they weren't really mentioned on WHATWG's Living Document</li>
+				<li>Gotta check out how to create a sitemap, if necessary. Make sure to include the <a
+						href=https://en.wikipedia.org/wiki/Sitemaps#Element_definitions>necessary tags</a></li>
+				<li>https://en.wikipedia.org/wiki/Site_map</li>
+				<li>https://en.wikipedia.org/wiki/Sitemaps</li>
+				<li>Make thaumatorium.com look good</li>
+				<li>Transfer my articles from my ye olde wordpress site</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<div class="copyright">
+			&copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			&ndash; <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
+			<abbr
+				title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'"
+				style="text-decoration: none; color: #800;">Thaumatorium</abbr>
 
-    </div>
-    <!-- Sssh - don't tell anyone! -->
-    <a class="secret" onclick=specialGoto(event)
-      style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
-  </footer>
-  <script>
+		</div>
+		<!-- Sssh - don't tell anyone! -->
+		<a class="secret" onclick=specialGoto(event)
+			style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
+	</footer>
+	<script>
 		let ty = document.getElementById("target-year");
 		ty.innerHTML = new Date().getFullYear() + 10000;
 

@@ -1,40 +1,40 @@
 {
-  "name": "The Thaumatorium",
-  "short_name": "Thaumatorium",
-  "description": "Where the magic happens",
-  "icons": [
-    {
-      "src": "/images/icons-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/images/icons-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "images/screenshots/Thaumatorium v1.png",
-      "sizes": "1280x720",
-      "type": "image/png"
-    }
-  ],
-  "categories": [
-    "news",
-    "network",
-    "entertainment",
-    "games",
-    "productivity",
-    "social"
-  ],
-  "theme_color": "#880000",
-  "background_color": "#880000",
-  "display": "minimal-ui",
-  "scope": "/",
-  "start_url": "/",
-  "lang": "en-GB",
-  "dir": "auto",
-  "orientation": "any"
+	"name": "The Thaumatorium",
+	"short_name": "Thaumatorium",
+	"description": "Where the magic happens",
+	"icons": [
+		{
+			"src": "/images/icons-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/images/icons-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "images/screenshots/Thaumatorium v1.png",
+			"sizes": "1280x720",
+			"type": "image/png"
+		}
+	],
+	"categories": [
+		"news",
+		"network",
+		"entertainment",
+		"games",
+		"productivity",
+		"social"
+	],
+	"theme_color": "#880000",
+	"background_color": "#880000",
+	"display": "minimal-ui",
+	"scope": "/",
+	"start_url": "/",
+	"lang": "en-GB",
+	"dir": "auto",
+	"orientation": "any"
 }

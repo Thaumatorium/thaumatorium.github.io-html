@@ -27,7 +27,7 @@ Exists for hosting purposes. Redirects thaumatorium.github.io to thaumatorium.co
 Only works on Chromium based browsers as of writing.
 
 *Information source*: 
-https://www.w3.org/TR/appmanifest/  
+https://www.w3.org/TR/appmanifest/	
 https://w3c.github.io/manifest/
 
 *Support level:*

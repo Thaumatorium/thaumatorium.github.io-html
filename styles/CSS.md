@@ -4,10 +4,10 @@ Since I'm relatively new, I'll document some information. No guarantee I'm actua
 
 ## Glossary
 
-| Abbreviation | Description     |
+| Abbreviation | Description		 |
 |--------------|-----------------|
-| RHS          | Right Hand Side |
-| LHS          | Left Hand Side  |
+| RHS					| Right Hand Side |
+| LHS					| Left Hand Side	|
 
 ## Attributes
 
@@ -58,7 +58,7 @@ This means the RHS is a **direct** child of LHS
 
 ``` HTML
 <LHS>
-    <RHS />
+		<RHS />
 </LHS>
 ```
 
@@ -69,9 +69,9 @@ RHS is some descendant of LHS (could be very shallow *or* very deep into the DOM
 
 ``` HTML
 <LHS>
-    <one-or-more-levels-deep>
-        <RHS />
-    </one-or-more-levels-deep>
+		<one-or-more-levels-deep>
+				<RHS />
+		</one-or-more-levels-deep>
 </LHS>
 ```
 

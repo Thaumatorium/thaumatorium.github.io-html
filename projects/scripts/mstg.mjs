@@ -1,6 +1,6 @@
 console.log("running mstg.mjs")
-let input = document.getElementById("in");
-let output = document.getElementById("out");
+let input = document.getElementById("mstg_in");
+let output = document.getElementById("mstg_out");
 
 input.addEventListener('input', () => {
 	let result = "";

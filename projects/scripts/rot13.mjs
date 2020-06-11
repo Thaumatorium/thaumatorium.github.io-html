@@ -1,6 +1,6 @@
 console.log("running rot13.mjs")
-let input = document.getElementById("in");
-let output = document.getElementById("out");
+let input = document.getElementById("rot13_in");
+let output = document.getElementById("rot13_out");
 
 const chr = (letter) => letter.charCodeAt(0);
 const ord = (letterValue) => String.fromCharCode(letterValue);

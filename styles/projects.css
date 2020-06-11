@@ -1,3 +1,13 @@
+section>#in {
+	width: 400px;
+	height: 5em;
+}
+
+section>#out {
+	width: 400px;
+	height: 5em;
+}
+
 section>canvas {
 	height: 100%;
 	width: 100%;

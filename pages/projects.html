@@ -32,6 +32,7 @@
 	<link async rel=stylesheet href=styles/nav.css />
 	<link async rel=stylesheet href=styles/main.css />
 	<link async rel=stylesheet href=styles/footer.css />
+	<link async rel=stylesheet href=styles/projects.css>
 </head>
 
 <body>
@@ -126,6 +127,16 @@
 						</a>
 						<figcaption>A generated starfield</figcaption>
 					</figure>
+					<section>
+						<h1>Starfield</h1>
+						<!-- CSS can dynamically load via HTML -->
+						<!-- JS on the other hand has to be dynamically loaded in index.html :/ -->
+						<!-- I get why though - probably to prevent Cross-Site Scripting (XSS) -->
+						<canvas id=starfield></canvas>
+						<!-- This script tag exists so the script still works if you go to /projects/starfield.html -->
+						<!-- It's useless for 'injecting' the html -->
+						<script type=module src=/projects/scripts/starfield.mjs></script>
+					</section>
 				</details>
 			</section>
 
@@ -134,13 +145,17 @@
 					<summary>
 						<h1>Mocking Spongebob Text Generator (MSTG)</h1>
 					</summary>
-					<p>I created my own because others had randomized uppercase/lowercase and I wanted the odd letters to be
-						uppercase and the even letters to be lowercase.</p>
 					<figure>
 						<img loading=lazy width=201 height=115 src=/images/mockbob.png
 							alt="A generated starfield - the stars are shown moving from right to left. They are represented by circles of different sizes, but not brightness and color (yet).">
 						<figcaption>Mocking Spongebob</figcaption>
 					</figure>
+					<h1>Mocking Spongebob Text Generator</h1>
+					<p>input:</p>
+					<textarea id=mstg_in></textarea>
+					<p>output - click to copy to clipboard:</p>
+					<textarea id=mstg_out readonly></textarea>
+					<script type=module src=/projects/scripts/mstg.mjs></script>
 				</details>
 			</section>
 
@@ -150,6 +165,13 @@
 						<h1>ROT13</h1>
 					</summary>
 					<p>I <em>could</em> go to <a href=https://ROT13.com>ROT13.com</a>, but why?</p>
+					<link rel=stylesheet href="/projects/rot13/rot13.css">
+					<h1>ROT13</h1>
+					<p>input:</p>
+					<textarea id=rot13_in></textarea>
+					<p>output - click to copy to clipboard:</p>
+					<textarea id=rot13_out readonly></textarea>
+					<script type=module src=/projects/scripts/rot13.mjs></script>
 				</details>
 			</section>
 
@@ -165,6 +187,14 @@
 							keywords.
 						</p>
 					</blockquote> - <a href=https://en.wikipedia.org/wiki/Clean_URL#Slug>wikipedia</a>
+					<section>
+						<h1>Slugify</h1>
+						<p>input:</p>
+						<textarea id=slugify_in></textarea>
+						<p>output - click to copy to clipboard:</p>
+						<textarea id=slugify_out readonly></textarea>
+						<script type=module src=/projects/scripts/slugify.mjs></script>
+					</section>
 				</details>
 			</section>
 
@@ -173,7 +203,22 @@
 					<summary>
 						<h1>Base64</h1>
 					</summary>
-					<p>Base64 encoder/decoder</p>
+					<section>
+						<h1>Base64 encode</h1>
+						<p>input:</p>
+						<textarea id=base64_in_encode></textarea>
+						<p>output - click to copy to clipboard:</p>
+						<textarea id=base64_out_encode readonly></textarea>
+
+						<h1>Base64 decode</h1>
+						<p>input:</p>
+						<textarea id=base64_in_decode></textarea>
+						<p>output - click to copy to clipboard:</p>
+						<textarea id=base64_out_decode readonly></textarea>
+
+						<script type=module src=/projects/scripts/base64.mjs></script>
+					</section>
+
 				</details>
 			</section>
 		</section>

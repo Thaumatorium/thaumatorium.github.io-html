@@ -1,8 +1,8 @@
 console.log("running base64.mjs")
-let in_encode = document.getElementById("in_encode");
-let out_encode = document.getElementById("out_encode");
-let in_decode = document.getElementById("in_decode");
-let out_decode = document.getElementById("out_decode");
+let in_encode = document.getElementById("base64_in_encode");
+let out_encode = document.getElementById("base64_out_encode");
+let in_decode = document.getElementById("base64_in_decode");
+let out_decode = document.getElementById("base64_out_decode");
 
 in_encode.addEventListener('input', () => {
 	// Ascii to Base64

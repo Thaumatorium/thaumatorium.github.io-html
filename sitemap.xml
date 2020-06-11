@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://thaumatorium.com/</loc>
+	<lastmod>2020-06-12T02:14:57+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/pages/articles.html</loc>
+	<lastmod>2020-06-12T02:14:57+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/pages/projects.html</loc>
+	<lastmod>2020-06-12T02:15:00+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/pages/experimentations.html</loc>
+	<lastmod>2020-06-12T02:15:00+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/pages/todo.html</loc>
+	<lastmod>2020-06-12T02:15:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/pages/about.html</loc>
+	<lastmod>2020-06-12T02:15:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/find-the-nth-comma-via-regex.html</loc>
+	<lastmod>2020-06-12T02:15:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/find-every-line-that-doesn-t-start-with-a-dot-via-regex.html</loc>
+	<lastmod>2020-06-12T02:15:02+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/find-non-ascii-letters-in-vscode.html</loc>
+	<lastmod>2020-06-12T02:15:02+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/types-of-haskell-functions.html</loc>
+	<lastmod>2020-06-12T02:15:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/quick-n-dirty-big-o.html</loc>
+	<lastmod>2020-06-12T02:15:03+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/haskells-fold-functions-explained.html</loc>
+	<lastmod>2020-06-12T02:15:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/spark-files-and-taking-notes.html</loc>
+	<lastmod>2020-06-12T02:15:04+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files.html</loc>
+	<lastmod>2020-06-12T02:15:06+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>

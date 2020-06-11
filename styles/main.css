@@ -98,3 +98,11 @@ table td {
 	text-align: left;
 	vertical-align: top;
 }
+
+ul {
+	padding: 10px 0 10px 30px;
+}
+
+li {
+	list-style-type: '– ';
+}

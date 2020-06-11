@@ -43,23 +43,52 @@
 		<div id=banner-text>
 			<h1 class=title>The Thaumatorium:</h1>
 			<div class=subtitle>Where the magic happens</div>
-			<p><sub>Last updated: <time>2020-05-09</time></sub></p>
-			<p><sup>Previous update: <time>2020-05-02</time></sup></p>
+			<p><sub>Last updated: <time>2020-05-11</time></sub></p>
+			<script>
+				let previousUpdates = ["2020-05-09", "2020-05-02"]
+			</script>
 		</div>
 	</header>
 
 	<nav>
 		<!-- `this` refers to the anchor element. `hash` refers to the `#xxxx` of the `href` attribute -->
 		<!-- You can't use `this.href`, because that returns the full URL and we only want the hash -->
-		<a onclick=goto(this.hash) href>Frontpage</a>
-		<a onclick=goto(this.hash) href=#articles>Articles</a>
-		<a onclick=goto(this.hash) href=#projects>Projects</a>
-		<a onclick=goto(this.hash) href=#experimentations>Experimentations</a>
-		<a onclick=goto(this.hash) href=#todo>TODO</a>
-		<a onclick=goto(this.hash) href=#about>About</a>
+		<a href>Frontpage</a>
+		<a href=pages/articles.html>Articles</a>
+		<a href=pages/projects.html>Projects</a>
+		<a href=pages/experimentations.html>Experimentations</a>
+		<a href=pages/todo.html>TODO</a>
+		<a href=pages/about.html>About</a>
 	</nav>
 
-	<main></main>
+	<main>
+		<section>
+			<h1>Welcome to the Thaumatorium!</h1>
+			<p>
+				<strong>Note:</strong> This website is pure uncompressed HTML/CSS/JS, with some PNG and WEBP images to fluff
+				shit
+				up. I like to think that this is how the web is <em>supposed</em> to be.</p>
+			<p>
+				An example on <em>how not to do HTML</em>, take a look at Twitter with their
+				<code>&lt;div&gt;&lt;div&gt;&lt;div&gt;divs&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code>
+				nonsense. Silly Twitter! That's not how HTML should look!
+			</p>
+			<p>
+				<strong>Disclaimer:</strong> I'm not perfect, so this file <em>will likely</em> contain mistakes. If you find
+				any, please open a <a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues">Github Issue</a>,
+				whether it's just a spelling mistake or something wrong with the HTML.
+			</p>
+			<p>
+				This site's author based in the Netherlands. I like to take an unnormal take on things: Look at what the masses
+				are
+				doing, learning from them by NOT doing that and finding out where the good shit is at!
+			</p>
+			<p>
+				That doesn't necessarily mean that popular = bad. I mean C# is relatively popular yet is damn good! I (still)
+				just hate JavaScript and its ecology. Feckin' JavaScript.
+			</p>
+		</section>
+	</main>
 	<footer>
 		<div class="copyright">
 			&copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
@@ -76,79 +105,12 @@
 		<a class="secret" onclick=specialGoto(event)
 			style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
 	</footer>
-
 	<script>
-		// Previously, every article and page existed in index.html, which made this file 256 lines big. As of now, it's 109
-		/**
-		 * 
-		 */
-		const goto = (hash, hasScript = false) => {
-			// Stick in a hash, get out the page's path
-			const hashToPageMap = {
-				"": { path: "/pages/frontpage.html", js: false },
-				"#frontpage": { path: "/pages/frontpage.html", js: false },
-				"#projects": { path: "/pages/projects.html", js: false },
-				"#praetorianpi": { path: "/pages/praetorianpi.html", js: false },
-				"#experimentations": { path: "/pages/experimentations.html", js: false },
-				"#todo": { path: "/pages/todo.html", js: false },
-				"#about": { path: "/pages/about.html", js: false },
-				"#articles": { path: "/pages/articles.html", js: false },
-
-				// articles
-				"#example": { path: "/articles/example.html", js: false },
-				"#blog": { path: "/articles/blog.html", js: false },
-				"#find-every-line-that-doesn-t-start-with-a-dot-via-regex": { path: "/articles/find-every-line-that-doesn.html", js: false },
-				"#find-non-ascii-letters-in-vscode": { path: "/articles/find-non-ascii-letters.html", js: false },
-				"#find-the-nth-comma-via-regex": { path: "/articles/find-the-nth-comma-via-regex.html", js: false },
-				"#haskells-fold-functions-explained": { path: "/articles/haskells-fold-functions-explained.html", js: false },
-				"#quick-n-dirty-big-o": { path: "/articles/quick-n-dirty-big-o.html", js: false },
-				"#spark-files-and-taking-notes": { path: "/articles/spark-files-and-taking-notes.html", js: false },
-				"#splitting-js-css-into-2-or-3-files": { path: "/articles/splitting-js-css-into-2-or-3.html", js: false },
-				"#types-of-haskell-functions": { path: "/articles/types-of-haskell-functions.html", js: false },
-
-				// projects
-				"#starfield": { path: "/projects/starfield/starfield.html", js: true },
-				"#mstg": { path: "/projects/mstg/mstg.html", js: true },
-				"#rot13": { path: "/projects/rot13/rot13.html", js: true },
-				"#slugify": { path: "/projects/slugify/slugify.html", js: true },
-				"#base64": { path: "/projects/base64/base64.html", js: true },
-			}
-			let data = hashToPageMap[hash];
-			fetch(data.path).then(response => {
-				return response.text();
-			}).then(html => {
-				const el = document.querySelector("body>main");
-				el.innerHTML = html;
-				if (data.js) {
-					// remove any existing script
-					let ds = document.getElementById("dynamic-script")
-					if(ds) {
-						ds.parentElement.removeChild(ds);
-					}
-					// generate new one
-					let script_tag = document.createElement('script');
-					let src_path = `${data.path.split(".")[0]}.mjs`;
-					script_tag.setAttribute("id", "dynamic-script");
-					script_tag.setAttribute("type", "module");
-					script_tag.setAttribute("src", src_path);
-
-					// add it to html
-					let body = document.getElementsByTagName("body")[0];
-					body.appendChild(script_tag);
-				}
-			}).catch(err => {
-				console.warn('Something went wrong.', err);
-			});
-		}
-
 		const specialGoto = (event) => {
 			if (event.ctrlKey && event.shiftKey) {
-				window.location = "#PraetorianPi";
-				goto("/pages/praetorianpi.html")
+				window.location.href = "/pages/praetorianpi.html";
 			}
 		}
-
-		goto(window.location.hash)
 	</script>
 </body>
 

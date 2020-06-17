@@ -109,3 +109,13 @@ ul {
 li {
 	list-style-type: '– ';
 }
+
+.disclaimer {
+	background-color: rgba(136, 0, 0, 0.3);
+	color: #fff;
+	font-family: Tahoma, sans-serif;
+	padding: 20px;
+	margin: 20px;
+	border: 2px solid #800;
+	line-height: 150%
+}

@@ -45,9 +45,11 @@
 		<div id=banner-text>
 			<h1 class=title>The Thaumatorium:</h1>
 			<div class=subtitle>Where the magic happens</div>
-			<p><sub>Last updated: <time>2020-06-11</time></sub></p>
+			<p><sub>Last updated: <time id=updated>2020-06-11</time></sub></p>
 			<script>
-				let previousUpdates = ["2020-05-11", "2020-05-09", "2020-05-02"]
+				let updated = document.getElementById("updated");
+				let date = new Date(document.lastModified);
+				update.innerHTML = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
 			</script>
 		</div>
 	</header>
@@ -258,6 +260,17 @@
 			<img class=pi src=pages/wc4.png width=640 />
 			<p>default</p>
 			<img src=pages/wc5.png width=640 />
+		</section>
+		<section>
+			<h2>font weirdness</h2>
+			<style>
+				p.weird { font: 12pt/14pt sans-serif }
+				p.weird { font: 80% sans-serif }
+				p.weird { font: x-large/110% "new century schoolbook", serif }
+				p.weird { font: bold italic large Palatino, serif }
+				p.weird { font: normal small-caps 120%/120% fantasy }
+				p.weird { font: condensed oblique 12pt "Helvetica Neue", serif; }
+			</style>
 		</section>
 	</main>
 	<footer>

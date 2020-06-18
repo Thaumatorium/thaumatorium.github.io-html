@@ -50,7 +50,7 @@
 			<script>
 				let updated = document.getElementById("updated");
 				let date = new Date(document.lastModified);
-				update.innerHTML = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`
+				updated.innerHTML = date.toISOString().split("T")[0];
 			</script>
 		</div>
 	</header>

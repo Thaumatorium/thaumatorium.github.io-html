@@ -42,7 +42,7 @@ self.addEventListener("install", (event) => {
 				"/images/wc3.png",
 				"/images/wc4.png",
 				"/images/wc5.png",
-
+				"/images/conduct.webp",
 
 				// website pages
 				"/pages/about.html",
@@ -51,6 +51,8 @@ self.addEventListener("install", (event) => {
 				"/pages/praetorianpi.html",
 				"/pages/projects.html",
 				"/pages/todo.html",
+				"/pages/code-of-conduct.html",
+
 				// Projects
 				"/projects/scripts/base64.mjs",
 				"/projects/scripts/mstg.mjs",

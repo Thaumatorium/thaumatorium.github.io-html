@@ -205,7 +205,7 @@
 				p.diamond {
 					border: double orange 1em;
 					border-radius: 20px;
-					border-image: url("/pages/border.png") 27 round stretch;
+					border-image: url("/images/border.png") 27 round stretch;
 					box-shadow: 20px 20px 12px 12px rgba(0, 0, 0, 0.4),
 						rgba(0, 0, 0, 0.4) 10px 10px 0 1px inset;
 				}
@@ -213,7 +213,7 @@
 				p.wiggles {
 					/* doesn't work ಥ_ಥ */
 					border-image-slice: 124;
-					border-image-source: url("/pages/border.png");
+					border-image-source: url("/images/border.png");
 					border: 12px double green;
 					background-color: #c4ebec;
 					background-clip: padding-box;
@@ -251,26 +251,106 @@
 				}
 			</style>
 			<p>smooth</p>
-			<img class=s src=pages/wc1.png width=640 />
+			<img class=s src=images/wc1.png width=640 />
 			<p>high-quality</p>
-			<img class=hq src=pages/wc2.png width=640 />
+			<img class=hq src=images/wc2.png width=640 />
 			<p>crisp-edges - this looks broken :(</p>
-			<img class=ce src=pages/wc3.png width=640 />
+			<img class=ce src=images/wc3.png width=640 />
 			<p>pixelated</p>
-			<img class=pi src=pages/wc4.png width=640 />
+			<img class=pi src=images/wc4.png width=640 />
 			<p>default</p>
-			<img src=pages/wc5.png width=640 />
+			<img src=images/wc5.png width=640 />
 		</section>
 		<section>
 			<h2>font weirdness</h2>
 			<style>
-				p.weird { font: 12pt/14pt sans-serif }
-				p.weird { font: 80% sans-serif }
-				p.weird { font: x-large/110% "new century schoolbook", serif }
-				p.weird { font: bold italic large Palatino, serif }
-				p.weird { font: normal small-caps 120%/120% fantasy }
-				p.weird { font: condensed oblique 12pt "Helvetica Neue", serif; }
+				p.weird {
+					font: 12pt/14pt sans-serif
+				}
+
+				p.weird {
+					font: 80% sans-serif
+				}
+
+				p.weird {
+					font: x-large/110% "new century schoolbook", serif
+				}
+
+				p.weird {
+					font: bold italic large Palatino, serif
+				}
+
+				p.weird {
+					font: normal small-caps 120%/120% fantasy
+				}
+
+				p.weird {
+					font: condensed oblique 12pt "Helvetica Neue", serif;
+				}
 			</style>
+			<p>wut</p>
+		</section>
+		<section>
+			<h2>CSS transitions</h2>
+			<style>
+				.tran1 {
+					color: black;
+					background: white;
+					transform: rotate(45deg);
+					transition-property: filter, transform;
+					transition-duration: 1s, 2s;
+				}
+
+				.tran1:hover {
+					filter: invert(100%);
+					transform: rotate(0deg);
+					transition-property: filter, transform;
+					transition-duration: 1s, 4s;
+				}
+
+				.tran2 {
+					color: black;
+					background-color: white;
+					/* transition-property: opacity, left; */
+					transition-duration: 1s, 4s;
+				}
+
+				.tran2:hover {
+					filter: blur(1px);
+				}
+			</style>
+			<div class="tran1">
+				Hover me 1
+			</div>
+			<div class="tran2">
+				Hover me 2
+			</div>
+		</section>
+		<section style="height: 600px;">
+			<h2>CSS Animations</h2>
+			<p>source: <a href="https://www.youtube.com/watch?v=zHUpx90NerM">Travery Media</a></p>
+			<style>
+				.anim {
+					background: #eee;
+					width: 200px;
+					height: 200px;
+					position: relative;
+					animation-name: myanim;
+					animation-duration: 4s;
+					animation-iteration-count: infinite;
+					animation-direction: alternate;
+					animation-timing-function: ease-in-out;
+				}
+
+				@keyframes myanim {
+					0% {background-color: #eee; left:0px; top: 0px;}
+					25% {background-color: red; left:300px; top: 0px;}
+					50% {background-color: green; left:300px; top: 300px;}
+					75% {background-color: blue; left:0px; top: 300px;}
+					100% {background-color: #eee; left:0px; top: 0px;}
+				}
+			</style>
+			<div class="anim"></div>
 		</section>
 	</main>
 	<footer>

@@ -36,21 +36,21 @@ self.addEventListener("install", (event) => {
 				"/images/starfield-thumb.webp",
 				"/images/starfield.webp",
 				"/images/Thaumatorium.svg",
+				"/images/border.png",
+				"/images/wc1.png",
+				"/images/wc2.png",
+				"/images/wc3.png",
+				"/images/wc4.png",
+				"/images/wc5.png",
+
 
 				// website pages
 				"/pages/about.html",
 				"/pages/articles.html",
-				"/pages/border.png",
 				"/pages/experimentations.html",
 				"/pages/praetorianpi.html",
 				"/pages/projects.html",
 				"/pages/todo.html",
-				"/pages/wc1.png",
-				"/pages/wc2.png",
-				"/pages/wc3.png",
-				"/pages/wc4.png",
-				"/pages/wc5.png",
-
 				// Projects
 				"/projects/scripts/base64.mjs",
 				"/projects/scripts/mstg.mjs",

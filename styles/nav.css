@@ -5,6 +5,7 @@ body>nav * {
 	padding: 0;
 	padding: 6px;
 	text-decoration: none;
+	transition-duration: 300ms;
 }
 
 body>nav *:hover {
@@ -17,4 +18,5 @@ body>nav {
 	background-color: #940000;
 	padding: 6px;
 	text-align: center;
+	transition-duration: 300ms;
 }

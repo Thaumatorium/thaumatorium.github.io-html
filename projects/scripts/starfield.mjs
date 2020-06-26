@@ -67,6 +67,7 @@ const step = (timestamp) => {
 		if (star.x < 0) {
 			stars.push(stars.splice(i, 1)[0]);
 			star.x = max_depth;
+			star.y = Math.random() * height;
 			continue;
 		}
 

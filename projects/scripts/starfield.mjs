@@ -1,3 +1,4 @@
+window.starfield.style = "background:black;"
 const context = window.starfield.getContext("2d");
 let height = document.documentElement.clientHeight;
 let width = document.documentElement.clientWidth;
@@ -54,7 +55,7 @@ const step = (timestamp) => {
 	context.canvas.width = width;
 
 	// create the black background
-	context.fillRect(0, 0, width, height);
+	// context.fillRect(0, 0, width, height);
 
 	for (let i = stars.length - 1; i > -1; i--) {
 		let star = stars[i];
@@ -75,7 +76,7 @@ const step = (timestamp) => {
 		context.beginPath();
 		context.fillStyle = "rgb(" + star.r + "," + star.g + "," + star.b + ")";
 		context.arc(star.x, star.y, star.size * scale, 0, 2 * Math.PI);
-		context.shadowBlur = star.halo;
+		// context.shadowBlur = star.halo;
 		context.shadowColor = "rgb(" + star.r + "," + star.g + "," + star.b + ")";
 		context.fill();
 	}

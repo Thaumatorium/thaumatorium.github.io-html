@@ -1,11 +1,11 @@
 body>nav * {
 	color: #fff;
-	font: 14px Arial, sans-serif;
+	font: 18px Arial, sans-serif;
 	margin: 0;
-	padding: 0;
 	padding: 6px;
 	text-decoration: none;
 	transition-duration: 300ms;
+	display: inline-block;
 }
 
 body>nav *:hover {

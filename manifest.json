@@ -24,12 +24,14 @@
 		}
 	],
 	"categories": [
-		"news",
-		"network",
+		"education",
 		"entertainment",
-		"games",
+		"lifestyle",
+		"news",
 		"productivity",
-		"social"
+		"security",
+		"social",
+		"utilities"
 	],
 	"theme_color": "#880000",
 	"background_color": "#880000",

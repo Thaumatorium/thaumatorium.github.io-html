@@ -35,7 +35,7 @@ self.addEventListener("install", (event) => {
 				"/images/mockbob.png",
 				"/images/starfield-thumb.webp",
 				"/images/starfield.webp",
-				"/images/Thaumatorium.svg",
+				"/images/logo.svg",
 				"/images/border.png",
 				"/images/wc1.png",
 				"/images/wc2.png",

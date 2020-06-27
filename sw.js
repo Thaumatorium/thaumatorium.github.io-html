@@ -29,7 +29,7 @@ self.addEventListener("install", (event) => {
 				"/images/big-o.png",
 				"/images/binary-trees.png",
 				"/images/clever.webp",
-				"/images/favicon.svg",
+				"/images/favicon.png",
 				"/images/icons-192.png",
 				"/images/icons-512.png",
 				"/images/mockbob.png",

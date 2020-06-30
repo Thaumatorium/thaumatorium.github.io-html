@@ -2,7 +2,7 @@ let input = document.getElementById("slugify_in");
 let output = document.getElementById("slugify_out");
 
 input.addEventListener('input', () => {
-	output.value = input.value.replace(/[^a-z]/gi, c => {
+	output.value = input.value.replace(/[^a-z0-9]/gi, c => {
 		return "-";
 	});
 	output.value = output.value.toLowerCase();

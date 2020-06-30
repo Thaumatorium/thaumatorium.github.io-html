@@ -1,4 +1,4 @@
-body>nav * {
+body>nav a {
 	color: #fff;
 	font: 18px Arial, sans-serif;
 	margin: 0;
@@ -8,7 +8,7 @@ body>nav * {
 	display: inline-block;
 }
 
-body>nav *:hover {
+body>nav a:hover {
 	background-color: #fff;
 	color: #800;
 	text-decoration: underline;
@@ -19,4 +19,10 @@ body>nav {
 	padding: 6px;
 	text-align: center;
 	transition-duration: 300ms;
+}
+
+body>nav span {
+	color: #fff;
+	font: 18px Arial, sans-serif;
+	cursor: default;
 }

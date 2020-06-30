@@ -15,4 +15,5 @@ body>footer .secret {
 body>footer {
 	border-top: 10px solid #9a2121;
 	padding: 30px;
+	box-shadow: -1px -2px 2px gray;
 }

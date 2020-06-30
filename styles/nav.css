@@ -25,3 +25,7 @@ body>nav span {
 	font: 18px Arial, sans-serif;
 	cursor: default;
 }
+
+body>nav {
+	box-shadow: -1px 2px 2px gray;
+}

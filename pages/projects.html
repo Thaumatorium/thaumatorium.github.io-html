@@ -58,10 +58,9 @@
 					</summary>
 					<p>This site!</p>
 					<p>First I was going to create it in Angular, but then I learned React and wanted it to it in that. But then I
-						figured out how Elm worked and created the actual <em>first</em> version in that - on archive.org you can see the
-						first
-						version uses <code>elm.js</code>, but I found it to be too opinionated. Not to mention I found the
-						<code>information/javascript</code> ratio to be too low.</p>
+						figured out how Elm worked and created the actual <em>first</em> version in that - on archive.org you can
+						see the first version uses <code>elm.js</code>, but I found it to be too opinionated. Not to mention I found
+						the <code>information/javascript</code> ratio to be too low.</p>
 					<p>Eventually, after reading up on <a href=https://eloquentjavascript.net />JS</a>, <a
 							href=https://html.spec.whatwg.org/dev />HTML</a> and <a href=https://www.w3.org/TR/css-2018 />CSS</a>, I
 						decided
@@ -100,25 +99,9 @@
 						different sized stars from the right to the left.</p>
 					<p>Over the years I created different versions (a 2D and even a 3D OpenGL variant!)</p>
 					<p>Now that I know some HTML/CSS/JS, I decided to recreate this project for the web with plain HTML/CSS/JS!
-						No
-						crazy
-						libraries needed!</p>
-					<p>I still want to add brightness and color to the whole shebang!</p>
-					<figure>
-						<a href=/images/starfield.webp>
-							<img loading=lazy width=201 height=115 src=/images/starfield-thumb.webp
-								alt="A generated starfield - the stars are shown moving from right to left. They are represented by circles of different sizes, but not brightness and color (yet).">
-						</a>
-						<figcaption>A generated starfield</figcaption>
-					</figure>
+						No crazy libraries needed!</p>
 					<section>
-						<h1>Starfield</h1>
-						<!-- CSS can dynamically load via HTML -->
-						<!-- JS on the other hand has to be dynamically loaded in index.html :/ -->
-						<!-- I get why though - probably to prevent Cross-Site Scripting (XSS) -->
 						<canvas id=starfield></canvas>
-						<!-- This script tag exists so the script still works if you go to /projects/starfield.html -->
-						<!-- It's useless for 'injecting' the html -->
 						<script type=module src=/projects/scripts/starfield.mjs></script>
 					</section>
 				</details>

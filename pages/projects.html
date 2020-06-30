@@ -28,13 +28,13 @@
 		</div>
 		<div id=banner-text>
 			<h1 class=title>The Thaumatorium:</h3>
-			<div class=subtitle>Where the magic happens</div>
-			<p><sub>Last updated: <time id=updated>2020-06-11</time></sub></p>
-			<script>
-				let updated = document.getElementById("updated");
-				let date = new Date(document.lastModified);
-				updated.innerHTML = date.toISOString().split("T")[0];
-			</script>
+				<div class=subtitle>Where the magic happens</div>
+				<p><sub>Last updated: <time id=updated>2020-06-11</time></sub></p>
+				<script>
+					let updated = document.getElementById("updated");
+					let date = new Date(document.lastModified);
+					updated.innerHTML = date.toISOString().split("T")[0];
+				</script>
 		</div>
 	</header>
 
@@ -51,6 +51,7 @@
 	<main>
 		<section>
 			<h2>(Ongoing) projects</h2>
+			<link async rel=stylesheet href="/styles/projects.css?v=1" />
 			<section>
 				<details>
 					<summary>
@@ -167,13 +168,13 @@
 						<h3>Base64</h3>
 					</summary>
 					<section>
-						<h3>Base64 encode</h3>
+						<h3>Encode</h3>
 						<p>input:</p>
 						<textarea id=base64_in_encode></textarea>
 						<p>output - click to copy to clipboard:</p>
 						<textarea id=base64_out_encode readonly></textarea>
 
-						<h3>Base64 decode</h3>
+						<h3>Decode</h3>
 						<p>input:</p>
 						<textarea id=base64_in_decode></textarea>
 						<p>output - click to copy to clipboard:</p>

@@ -22,8 +22,7 @@
 	<header>
 		<div id=banner-logo>
 			<a href="/">
-				<img height=111 width=111 src="/images/logo.svg"
-					alt="main logo consisting of a checkerboard pattern" />
+				<img height=111 width=111 src="/images/logo.svg" alt="main logo consisting of a checkerboard pattern" />
 			</a>
 		</div>
 		<div id=banner-text>
@@ -54,28 +53,58 @@
 
 	<main>
 		<section>
-			<h2>Articles</h2>
-			<h3><a href=articles/find-the-nth-comma-via-regex.html>Find the nth comma via regex</a></h3>
-			<time datetime=2018-04-05>2018-04-05</time>
-			<h3><a href=articles/find-every-line-that-doesn-t-start-with-a-dot-via-regex.html>Find every line that doesn’t
-					start with a . via Regex</a></h3>
-			<time datetime=2018-05-17>2018-05-17</time>
-			<h3><a href=articles/find-non-ascii-letters-in-vscode.html>Find non-ASCII letters in vscode</a></h3>
-			<time datetime=2018-09-27>2018-09-27</time>
-			<h3><a href=articles/types-of-haskell-functions.html>Types (or classes) of Haskell functions</a></h3>
-			<time datetime=2018-10-15>2018-10-15</time>
-			<h3><a href=articles/quick-n-dirty-big-o.html>Quick ‘n Dirty Big O</a></h3>
-			<time datetime=2019-03-16>2019-03-16</time>
-			<h3><a href=articles/haskells-fold-functions-explained.html>Haskell’s fold functions explained</a></h3>
-			<time datetime=2019-05-01>2019-05-01</time>
-			<h3><a href=articles/spark-files-and-taking-notes.html>Spark files and taking notes</a></h3>
-			<time datetime=2019-09-14>2019-09-14</time>
-			<h3><a href=articles/splitting-js-css-into-2-or-3-files.html>Splitting JS/CSS into 2 or 3 files</a></h3>
-			<time datetime=2019-11-29>2019-11-29</time>
-			<h3><a href=articles/gs-programming-projects-for-n00bz.html>/g/'s Programming Projects for n00bz</a></h3>
-			<time datetime=2020-06-30>2020-06-30</time>
-			<h3><a href="article/reddit-s-t-values.html">Reddit's t values</a></h3>
-			<time datetime=2020-07-01>2020-07-01</time>
+			<hgroup>
+				<h2>Reddit's t values</h2>
+				<div class=article-meta>
+					<div class=article-published>Published:<br><time datetime=2020-07-01>2020-07-01</time></div>
+					<div class=article-author>Author:<br>NostraDavid</div>
+				</div>
+			</hgroup>
+			<p>So, if you have ever dug around Reddit's HTML, you may have noticed some <code>t1_[ALPHANUMERIC]</code> values
+			</p>
+			<p>Here's a list of all I call &quot;<strong>t values</strong>&quot;:</p>
+			<table>
+				<thead>
+					<tr>
+						<th>t value</th>
+						<th>explanation</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>t1</td>
+						<td>Comment</td>
+					</tr>
+					<tr>
+						<td>t2</td>
+						<td>Account</td>
+					</tr>
+					<tr>
+						<td>t3</td>
+						<td>Link</td>
+					</tr>
+					<tr>
+						<td>t4</td>
+						<td>Message</td>
+					</tr>
+					<tr>
+						<td>t5</td>
+						<td>Subreddit</td>
+					</tr>
+					<tr>
+						<td>t6</td>
+						<td>Award</td>
+					</tr>
+					<tr>
+						<td>t7</td>
+						<td>DOES NOT EXIST AFAIK</td>
+					</tr>
+					<tr>
+						<td>t8</td>
+						<td>PromoCampaign</td>
+					</tr>
+				</tbody>
+			</table>
 		</section>
 	</main>
 	<footer>
@@ -88,7 +117,7 @@
 
 		</div>
 		<!-- Sssh - don't tell anyone! -->
-		<a class=secret onclick=specialGoto(event)
+		<a class="secret" onclick=specialGoto(event)
 			style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
 	</footer>
 	<script async src=pwa.js></script>

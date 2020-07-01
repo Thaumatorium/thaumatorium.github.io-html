@@ -11,9 +11,9 @@ self.addEventListener("install", (event) => {
 				"/",
 
 				// Caching 404.html may break it - will need to test
-				// "/404.html",
+				"/404.html",
 				"/index.html",
-				"manifest.json",
+				"/manifest.json",
 
 				// Articles
 				"/articles/find-every-line-that-doesn-t-start-with-a-dot-via-regex.html",
@@ -26,7 +26,7 @@ self.addEventListener("install", (event) => {
 				"/articles/stache-open.svg",
 				"/articles/types-of-haskell-functions.html",
 				"/articles/gs-programming-projects-for-n00bz.html",
-				
+
 				// general images
 				"/images/big-o.png",
 				"/images/binary-trees.png",
@@ -52,7 +52,6 @@ self.addEventListener("install", (event) => {
 				"/pages/experimentations.html",
 				"/pages/praetorianpi.html",
 				"/pages/projects.html",
-				"/pages/todo.html",
 				"/pages/code-of-conduct.html",
 
 				// Projects
@@ -69,7 +68,9 @@ self.addEventListener("install", (event) => {
 				"/styles/main.css",
 				"/styles/nav.css",
 				"/styles/projects.css"
-			]);
+			]).catch((error) => {
+				console.error(`Failing to cache files with error '${error}'. Make sure all files in sw.js actually exists.`);
+			});
 		})
 	);
 });

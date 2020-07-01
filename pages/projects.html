@@ -22,8 +22,7 @@
 	<header>
 		<div id=banner-logo>
 			<a href="/">
-				<img height=111 width=111 src="/images/logo.svg"
-					alt="main logo consisting of a checkerboard pattern" />
+				<img height=111 width=111 src="/images/logo.svg" alt="main logo consisting of a checkerboard pattern" />
 			</a>
 		</div>
 		<div id=banner-text>
@@ -177,6 +176,47 @@
 						<script type=module src=/projects/scripts/base64.mjs></script>
 					</section>
 
+				</details>
+			</section>
+
+			<section>
+				<details>
+					<summary>
+						<h3>Timing fetch</h3>
+					</summary>
+					<section>
+						<pre>
+let d=Date.now();
+fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
+	.then(response => response.json())
+	.then(data => {
+		console.log(`${Date.now()-d}ms\t${JSON.stringify(data).length} bytes`);
+	});
+						</pre>
+						<p><strong>Example URLs:</strong></p>
+						<ul>
+							<li>https://hacker-news.firebaseio.com/v0/user/NostraDavid.json</li>
+							<li>https://old.reddit.com/user/NostraDavid.json</li>
+						</ul>
+						<label>url: <input type="url" id=fetch-input value=https://hacker-news.firebaseio.com/v0/user/NostraDavid.json></label>
+						<button onclick="fetchOutputHN()">Run code</button>
+						<p>It took: <output id=fetch-timing>?</output>ms</p>
+						<p>The data is <output id=fetch-length>?</output> bytes long</p>
+						<script>
+							function fetchOutputHN(self) {
+								let input = document.getElementById("fetch-input");
+								let timing = document.getElementById("fetch-timing");
+								let length = document.getElementById("fetch-length");
+								let d = Date.now();
+								fetch(input.value)
+									.then(response => response.json())
+									.then(data => {
+										timing.innerHTML = Date.now() - d;
+										length.innerHTML = JSON.stringify(data).length;
+									});
+							}
+						</script>
+					</section>
 				</details>
 			</section>
 		</section>

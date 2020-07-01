@@ -135,3 +135,8 @@ li {
 	border-left-width: 10px;
 	line-height: 150%
 }
+
+pre {
+	/* tab size 2 or death! */
+  tab-size: 2;
+}

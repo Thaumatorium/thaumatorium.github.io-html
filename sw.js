@@ -7,10 +7,11 @@ self.addEventListener("install", (event) => {
 	event.waitUntil(
 		caches.open(THAUM_CACHE).then((cache) => {
 			return cache.addAll([
-				// last updated: 2020-06-11
+				// last updated: 2020-07-01
 				"/",
 
-				"/404.html",
+				// Caching 404.html may break it - will need to test
+				// "/404.html",
 				"/index.html",
 				"manifest.json",
 
@@ -24,7 +25,8 @@ self.addEventListener("install", (event) => {
 				"/articles/splitting-js-css-into-2-or-3-files.html",
 				"/articles/stache-open.svg",
 				"/articles/types-of-haskell-functions.html",
-
+				"/articles/gs-programming-projects-for-n00bz.html",
+				
 				// general images
 				"/images/big-o.png",
 				"/images/binary-trees.png",

@@ -7,7 +7,7 @@ self.addEventListener("install", (event) => {
 	event.waitUntil(
 		caches.open(THAUM_CACHE).then((cache) => {
 			return cache.addAll([
-				// last updated: 2020-07-01
+				// last updated: 2020-07-03
 				"/",
 
 				// Caching 404.html may break it - will need to test
@@ -45,6 +45,8 @@ self.addEventListener("install", (event) => {
 				"/images/wc4.png",
 				"/images/wc5.png",
 				"/images/conduct.webp",
+				"/images/ko-fi-logo.svg",
+				"/images/ko-fi-support.svg",
 
 				// website pages
 				"/pages/about.html",

@@ -32,3 +32,7 @@ https://w3c.github.io/manifest/
 
 *Support level:*
 https://caniuse.com/#feat=web-app-manifest
+
+## Support
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J61VMSC)

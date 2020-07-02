@@ -14,7 +14,7 @@ body>main h1, body>main h2, body>main h3, body>main h4, body>main h5, body>main 
 	text-transform: uppercase;
 }
 
-main h1::before, main h2::before, main h3::before {
+main h1::before, main h2::before, main h3::before, main h4::before {
 	content: "§ ";
 }
 
@@ -139,4 +139,10 @@ li {
 pre {
 	/* tab size 2 or death! */
   tab-size: 2;
+}
+
+q {
+	font-size: 1.1em;
+	font-style: oblique;
+	font-weight: bold;
 }

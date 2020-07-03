@@ -43,9 +43,7 @@ body>footer {
 
 @media (max-width: 720px) {
 	body>header {
-		/* No clue why it wouldn't override padding, without !important */
 		padding: 0 !important;
-		flex-direction: row;
 	}
 	body {
 		grid-template-columns: 1fr;

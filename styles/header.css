@@ -1,7 +1,7 @@
 body>header {
 	/* The header self */
 	background: #800;
-	padding: 20px 0 30px 0;
+	padding: 30px 0 30px 0;
 	text-align: center;
 }
 
@@ -26,4 +26,9 @@ body>header h2::first-letter {
 	/* Remember that em is relative to what's inherited */
 	/* This is basically 120% of the cascaded value */
 	font-size: 1.2em;
+}
+
+body>header {
+	background: url(/images/logo-light.svg) no-repeat center #800;
+	background-size: 256px 256px;
 }

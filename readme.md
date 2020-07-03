@@ -35,4 +35,4 @@ https://caniuse.com/#feat=web-app-manifest
 
 ## Support
 
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J61VMSC)
+[![ko-fi](https://thaumatorium.com/images/ko-fi-support.svg)](https://ko-fi.com/J3J61VMSC)

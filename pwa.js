@@ -40,29 +40,30 @@ function getCookie(name) {
 	return document.cookie
 		.split("; ")
 		.map((cookie) => cookie.split("="))
-		.filter((cookie) => cookie[0] == name);
+		.filter((cookie) => cookie[0] == name)[0];
 }
 
 function setCookie(name, value, exdays = 365) {
 	let d = new Date(Date.now() + exdays * 24 * 60 * 60 * 1000);
-	let expires = "expires=" + d.toISOString();
+	let expires = "expires=" + d.toUTCString();
 	document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
+function cookieExists(name) {
+	return getCookie(name) !== undefined
+}
 function getCookieValue(name) {
-	return getCookie(name)[1];
+	return cookieExists(name) ? getCookie(name)[1] : [];
 }
 
 // remove cookie notification if the user already accepted the notification
-if (getCookie('cookie-notification') === "read") {
-	let notification = document.getElementsByClassName("cookie-notification")[0]
-	notification.parentNode.removeChild(notification);
+let notification = document.getElementsByClassName("cookie-notification")[0];
+if (getCookieValue('cookie-notification') === "read") {
+	notification?.parentNode.removeChild(notification);
 	console.log("cookie notification removed");
 } else {
-	let notification = document.getElementsByClassName("cookie-notification")[0]
-	notification.addEventListener("click", () => {
+	notification?.addEventListener("click", () => {
 		setCookie('cookie-notification', 'read', 365);
-		let notification = document.getElementsByClassName("cookie-notification")[0]
 		notification.parentNode.removeChild(notification);
 	});
 }

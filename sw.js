@@ -59,6 +59,7 @@ addEventListener("install", event => {
 			"/pages/praetorianpi.html",
 			"/pages/projects.html",
 			"/pages/code-of-conduct.html",
+			"/pages/random-video.html",
 
 			// Projects
 			"/projects/scripts/base64.mjs",

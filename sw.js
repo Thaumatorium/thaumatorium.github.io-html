@@ -77,7 +77,6 @@ addEventListener("install", event => {
 
 			// External links
 			"https://www.googletagmanager.com/gtag/js?id=UA-169207994-1",
-			"https://www.google-analytics.com/analytics.js"
 		]);
 	})());
 });

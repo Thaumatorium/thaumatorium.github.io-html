@@ -89,7 +89,7 @@ self.addEventListener('activate', event => {
 
 addEventListener('fetch', event => {
 	const url = new URL(event.request.url);
-	const req = await fetch(event.request);
+	const req = fetch(event.request);
 
 	if (req) {
 		event.waitUntil((async () => {

@@ -19,6 +19,8 @@ For more information: https://www.w3.org/International/questions/qa-html-encodin
 	<!-- This description should show up in Google results -->
 	<meta name=description
 		content="This is a handcrafted blog where you can find articles and projects created by NostraDavid." />
+	<!-- Needed for Hyvor, and helps search engines reduce duplicate content "/" vs "/index.html", for example -->
+	<link rel="canonical" href="https://thaumatorium.com/">
 	<!-- Theme color for Android/iOS -->
 	<meta name=theme-color content=#800 />
 	<!-- icon for Apple's hardware -->
@@ -172,6 +174,17 @@ For more information: https://www.w3.org/International/questions/qa-html-encodin
 							href="https://www.ko-fi.com/img/githubbutton_sm.svg">Ko-fi provided</a>,<br> but optimized AF. Why do you
 						ask?</figcaption>
 				</figure>
+			</section>
+			<section>
+				<div id="hyvor-talk-view"></div>
+				<script type="text/javascript">
+					var HYVOR_TALK_WEBSITE = 1095; // DO NOT CHANGE THIS
+					var HYVOR_TALK_CONFIG = {
+						url: false,
+						id: false
+					};
+				</script>
+				<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
 			</section>
 		</article>
 	</main>

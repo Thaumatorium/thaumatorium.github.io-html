@@ -30,6 +30,7 @@ addEventListener("install", event => {
 			"/articles/stache-open.svg",
 			"/articles/types-of-haskell-functions.html",
 			"/articles/gs-programming-projects-for-n00bz.html",
+			"/articles/reddit-s-t-values.html",
 
 			// general images
 			"/images/big-o.png",

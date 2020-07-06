@@ -138,11 +138,16 @@ li {
 
 pre {
 	/* tab size 2 or death! */
-  tab-size: 2;
+	tab-size: 2;
 }
 
 q {
 	font-size: 1.1em;
 	font-style: oblique;
 	font-weight: bold;
+}
+
+main hr {
+	color: #800;
+	margin: 10px;
 }

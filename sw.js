@@ -88,6 +88,16 @@ self.addEventListener('activate', event => {
 });
 
 addEventListener('fetch', event => {
+	const url = new URL(event.request.url);
+	const req = await fetch(event.request);
+
+	if (req) {
+		event.waitUntil((async () => {
+			const cache = await caches.open(THAUM_CACHE);
+			await cache.add(url);
+		})());
+	}
+
 	event.respondWith(
 		caches.match(event.request)
 			.then(r => r || fetch(event.request))

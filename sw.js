@@ -96,9 +96,11 @@ self.addEventListener("fetch", (event) => {
 				// and serve second one
 				let responseClone = response_2.clone();
 
-				caches.open(THAUM_CACHE).then((cache_1) => {
-					cache_1.put(event.request, responseClone);
-				});
+				if (!event.url.contains("chrome-extension://")) {
+					caches.open(THAUM_CACHE).then((cache_1) => {
+						cache_1.put(event.request, responseClone);
+					});
+				}
 				return response_2;
 			}
 			catch (e) {

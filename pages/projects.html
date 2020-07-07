@@ -35,6 +35,7 @@
 
 		gtag('config', 'UA-169207994-1');
 	</script>
+
 	<header>
 		<h1 class=title>The Thaumatorium:</h1>
 		<div class=subtitle>Where the magic happens</div>
@@ -212,7 +213,8 @@ fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 							<li>https://old.reddit.com/r/all.json</li>
 							<li>https://old.reddit.com/.json</li>
 						</ul>
-						<label>url: <input type="url" id=fetch-input value=https://hacker-news.firebaseio.com/v0/user/NostraDavid.json></label>
+						<label>url: <input type="url" id=fetch-input
+								value=https://hacker-news.firebaseio.com/v0/user/NostraDavid.json></label>
 						<button onclick="fetchOutputHN()">Run code</button>
 						<p>It took: <output id=fetch-timing>?</output>ms</p>
 						<p>The data is <output id=fetch-length>?</output> bytes long</p>
@@ -264,7 +266,7 @@ fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 			<button>OK</button>
 		</div>
 	</footer>
-	<script async src=pwa.js></script>
+	<script async src=/pwa.js></script>
 </body>
 
 </html>

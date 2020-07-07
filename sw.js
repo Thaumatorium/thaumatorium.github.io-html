@@ -95,6 +95,8 @@ addEventListener('fetch', event => {
 		fetch(event.request).then(async () => {
 			const cache = await caches.open(THAUM_CACHE);
 			await cache.add(url);
+		}).catch(error => {
+			console.log(`sw.js: can't fetch ${url} with ${error}`);
 		});
 	}
 

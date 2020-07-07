@@ -79,9 +79,6 @@ addEventListener("install", event => {
 			"/styles/main.css?v=1",
 			"/styles/nav.css?v=1",
 			"/styles/projects.css?v=1",
-
-			// External links
-			"https://www.googletagmanager.com/gtag/js?id=UA-169207994-1",
 		]);
 	})());
 });

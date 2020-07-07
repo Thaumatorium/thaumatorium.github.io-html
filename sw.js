@@ -5,10 +5,11 @@
 
 const VERSION = `v2`;
 const THAUM_CACHE = `thaumcache-${VERSION}`;
+const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
 
 // This is run when a user visits the website for the first time
 addEventListener("install", event => {
-	console.log(`sw.js: installing ${VERSION}`);
+	console.log(`%csw.js: installing ${VERSION}`, CONSOLE_STYLE);
 
 	event.waitUntil((async () => {
 		const cache = await caches.open(THAUM_CACHE);
@@ -84,26 +85,26 @@ addEventListener("install", event => {
 });
 
 addEventListener('activate', event => {
-	console.log(`sw.js: ${VERSION} ready to handle fetches!`);
+	console.log(`%csw.js: ${VERSION} ready to handle fetches!`, CONSOLE_STYLE);
 });
 
 addEventListener('fetch', event => {
 	const url = new URL(event.request.url);
-	console.log(`sw.js: fetching ${url}`)
+	console.log(`%csw.js: fetching ${url}`, CONSOLE_STYLE);
 
 	if (url.host == 'thaumatorium.com') {
 		fetch(event.request).then(async () => {
 			const cache = await caches.open(THAUM_CACHE);
 			await cache.add(url);
 		}).catch(error => {
-			console.log(`sw.js: can't fetch local ${url} with ${error}`);
+			console.log(`%csw.js: can't fetch local ${url} with ${error}`, CONSOLE_STYLE);
 		});
 	}
 
 	event.respondWith(caches.match(event.request)
 		.then(r => r || fetch(event.request)
 			.catch(error => {
-				console.log(`sw.js: can't fetch external ${url} with ${error}`);
+				console.log(`%csw.js: can't fetch external ${url} with ${error}`, CONSOLE_STYLE);
 			})
 		)
 	);

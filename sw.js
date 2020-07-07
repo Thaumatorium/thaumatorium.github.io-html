@@ -96,14 +96,15 @@ addEventListener('fetch', event => {
 			const cache = await caches.open(THAUM_CACHE);
 			await cache.add(url);
 		}).catch(error => {
-			console.log(`sw.js: can't fetch ${url} with ${error}`);
+			console.log(`sw.js: can't fetch local ${url} with ${error}`);
 		});
 	}
 
-	let resp = caches.match(event.request)
-		.then(r => r || fetch(event.request).catch(error => {
-			console.log(`sw.js: can't fetch ${url} with ${error}`);
-		}));
-
-	event.respondWith(resp);
+	event.respondWith(caches.match(event.request)
+		.then(r => r || fetch(event.request)
+			.catch(error => {
+				console.log(`sw.js: can't fetch external ${url} with ${error}`);
+			})
+		)
+	);
 });

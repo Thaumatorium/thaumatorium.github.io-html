@@ -93,10 +93,8 @@ addEventListener('fetch', event => {
 
 	if (url.host == 'thaumatorium.com') {
 		fetch(event.request).then(() => {
-			event.waitUntil((async () => {
-				const cache = await caches.open(THAUM_CACHE);
-				await cache.add(url);
-			})());
+			const cache = await caches.open(THAUM_CACHE);
+			await cache.add(url);
 		});
 	}
 

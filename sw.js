@@ -3,10 +3,13 @@
 // https://github.com/mdn/sw-test
 // https://github.com/jakearchibald/svgomg/blob/master/src/js/sw/index.js <-- current base
 
-const THAUM_CACHE = `thaumcache-v1`;
+const VERSION = `v2`;
+const THAUM_CACHE = `thaumcache-${VERSION}`;
 
 // This is run when a user visits the website for the first time
 addEventListener("install", event => {
+	console.log(`sw.js: installing ${VERSION}`);
+
 	event.waitUntil((async () => {
 		const cache = await caches.open(THAUM_CACHE);
 
@@ -84,11 +87,12 @@ addEventListener("install", event => {
 });
 
 self.addEventListener('activate', event => {
-	console.log('sw.js now ready to handle fetches!');
+	console.log(`sw.js: ${VERSION} ready to handle fetches!`);
 });
 
 addEventListener('fetch', event => {
 	const url = new URL(event.request.url);
+	console.log(`sw.js: fetching ${url}`)
 	const req = fetch(event.request);
 
 	if (req) {

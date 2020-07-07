@@ -101,6 +101,9 @@ addEventListener('fetch', event => {
 	}
 
 	let resp = caches.match(event.request)
-		.then(r => r || fetch(event.request))
+		.then(r => r || fetch(event.request).catch(error => {
+			console.log(`sw.js: can't fetch ${url} with ${error}`);
+		}));
+
 	event.respondWith(resp);
 });

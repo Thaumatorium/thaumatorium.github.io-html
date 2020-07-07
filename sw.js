@@ -92,10 +92,12 @@ addEventListener('fetch', event => {
 	const url = new URL(event.request.url);
 	console.info(`%csw.js: fetching ${url}`, CONSOLE_STYLE);
 
-	if (url.host == 'thaumatorium.com') {
+	if (url.host == 'thaumatorium.com' || url.host == "127.0.0.1:5500") {
 		fetch(event.request).then(async () => {
 			const cache = await caches.open(THAUM_CACHE);
-			await cache.add(url);
+			await cache.add(url).then(() => {
+				console.info(`%csw.js: ${url} has been re-added to cache`, CONSOLE_STYLE);
+			});
 		}).catch(error => {
 			console.info(`%csw.js: can't fetch local ${url} with ${error}`, CONSOLE_STYLE);
 		});

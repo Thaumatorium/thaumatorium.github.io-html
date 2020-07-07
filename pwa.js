@@ -1,4 +1,4 @@
-const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
+const CONSOLE_STYLE = "background: #66023C; color: #fff; padding: 2px";
 
 // This script installs the service worker that turns the website into a basic PWA
 if ('serviceWorker' in navigator) {

@@ -5,7 +5,7 @@
 
 const VERSION = `v2`;
 const THAUM_CACHE = `thaumcache-${VERSION}`;
-const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
+const CONSOLE_STYLE = "background: #66023C; color: #fff; padding: 2px";
 
 // This is run when a user visits the website for the first time
 addEventListener("install", event => {

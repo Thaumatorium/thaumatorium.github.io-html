@@ -59,7 +59,10 @@
 	<main>
 		<section>
 			<hgroup>
-				<h2>Haskell’s fold functions explained</h2>
+				<h2 id=haskells-fold-functions-explained>
+					<a href="#haskells-fold-functions-explained" class="self-link"></a>
+	Haskell’s fold functions explained
+</h2>
 				<div class=article-meta>
 					<div class=article-published>Published:<br><time datetime=2019-05-01>2019-05-01</time></div>
 					<div class=article-author>Author:<br>NostraDavid</div>
@@ -74,7 +77,10 @@
 				Haskell functions</a>, you’ll know what that is) where it takes a function, a first/final item (more on this
 				later),
 				a list of things and returns a single reduces item.</p>
-			<h2>Foldr</h2>
+			<h2 id=foldr>
+				<a href="#foldr" class="self-link"></a>
+				Foldr
+			</h2>
 			<pre>
 foldr :: (a -> b -> b) -> b -> [a] -> b
 foldr f z []		 = z
@@ -160,7 +166,10 @@ foldr (+) 0 [1,2,3,4]
 = { apply the last - }
 -2
 </pre>
-			<h2>Foldl</h2>
+			<h2 id=foldl>
+				<a href="#foldl" class="self-link"></a>
+				Foldl
+			</h2>
 			<p>Definition (again from Wikipedia):</p>
 			<pre>
 foldl :: (b -> a -> b) -> b -> [a] -> b
@@ -218,7 +227,10 @@ foldl (-) ((-) ((-) ((-) ((-) 0 1) 2) 3) 4) []
 				parentheses :p )</p>
 			<p>If you’ve got any questions (especially when you don’t understand a part), let me know down below!</p>
 
-			<h2>Alternative explanation</h2>
+			<h2 id=alternative-explanation>
+				<a href="#alternative-explanation" class="self-link"></a>
+				Alternative explanation
+			</h2>
 			<p>With either foldl or foldr, the text of the list gets manipulated until something executable is produced:</p>
 			<pre>
 foldl (-) 0 [1,2,3,4]

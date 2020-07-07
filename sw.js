@@ -80,9 +80,9 @@ addEventListener("install", event => {
 			"/styles/nav.css?v=1",
 			"/styles/projects.css?v=1",
 		]);
-	})()).catch(error => {
-		console.log(`sw.js: can't cache list with ${error}`);
-	});
+	})());
+}).catch(error => {
+	console.log(`sw.js: can't cache list with ${error}`);
 });
 
 addEventListener('activate', event => {

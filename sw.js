@@ -90,13 +90,14 @@ self.addEventListener('activate', event => {
 addEventListener('fetch', event => {
 	const url = new URL(event.request.url);
 	console.log(`sw.js: fetching ${url}`)
-	const req = fetch(event.request);
 
-	if (req) {
-		event.waitUntil((async () => {
-			const cache = await caches.open(THAUM_CACHE);
-			await cache.add(url);
-		})());
+	if (url.host == 'thaumatorium.com') {
+		fetch(event.request).then(() => {
+			event.waitUntil((async () => {
+				const cache = await caches.open(THAUM_CACHE);
+				await cache.add(url);
+			})());
+		});
 	}
 
 	event.respondWith(

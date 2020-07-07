@@ -4,14 +4,14 @@ const CONSOLE_STYLE = "background: #66023C; color: #fff; padding: 2px";
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(reg => {
 		if (reg.installing) {
-			console.info('%cService worker installing', CONSOLE_STYLE);
+			console.info('%cpwa.js: Service worker installing', CONSOLE_STYLE);
 		} else if (reg.waiting) {
-			console.info('%cService worker installed', CONSOLE_STYLE);
+			console.info('%cpwa.js: Service worker installed', CONSOLE_STYLE);
 		} else if (reg.active) {
-			console.info('%cService worker active', CONSOLE_STYLE);
+			console.info('%cpwa.js: Service worker active', CONSOLE_STYLE);
 		}
 	}).catch(error => {
-		console.info(`%cRegistration failed with ${error}`, CONSOLE_STYLE);
+		console.info(`%cpwa.js: Registration failed with ${error}`, CONSOLE_STYLE);
 	});
 }
 

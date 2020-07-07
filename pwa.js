@@ -4,14 +4,14 @@ const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(reg => {
 		if (reg.installing) {
-			console.log('%cService worker installing', CONSOLE_STYLE);
+			console.info('%cService worker installing', CONSOLE_STYLE);
 		} else if (reg.waiting) {
-			console.log('%cService worker installed', CONSOLE_STYLE);
+			console.info('%cService worker installed', CONSOLE_STYLE);
 		} else if (reg.active) {
-			console.log('%cService worker active', CONSOLE_STYLE);
+			console.info('%cService worker active', CONSOLE_STYLE);
 		}
 	}).catch(error => {
-		console.log(`%cRegistration failed with ${error}`, CONSOLE_STYLE);
+		console.info(`%cRegistration failed with ${error}`, CONSOLE_STYLE);
 	});
 }
 
@@ -62,7 +62,7 @@ const getCookieValue = name => {
 let notification = document.getElementsByClassName("cookie-notification")[0];
 if (getCookieValue('cookie-notification') === "read") {
 	notification?.parentNode.removeChild(notification);
-	console.log("cookie notification removed");
+	console.info("cookie notification removed");
 } else {
 	notification?.addEventListener("click", () => {
 		setCookie('cookie-notification', 'read', 365);

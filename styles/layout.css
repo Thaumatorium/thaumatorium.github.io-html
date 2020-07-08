@@ -2,7 +2,8 @@
 
 * {
 	/* show CSS' box model */
-	/* border: 1px dotted black; */
+	/* border: 1px dotted darkgray; */
+	/* outline: 1px dotted black; */
 }
 
 body {

@@ -1,19 +1,27 @@
 const CONSOLE_STYLE = "background: #66023C; color: #fff; padding: 2px";
 
 // This script installs the service worker that turns the website into a basic PWA
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(reg => {
-		if (reg.installing) {
-			console.info('%cpwa.js: Service worker installing', CONSOLE_STYLE);
-		} else if (reg.waiting) {
-			console.info('%cpwa.js: Service worker installed', CONSOLE_STYLE);
-		} else if (reg.active) {
-			console.info('%cpwa.js: Service worker active', CONSOLE_STYLE);
-		}
-	}).catch(error => {
-		console.info(`%cpwa.js: Registration failed with ${error}`, CONSOLE_STYLE);
-	});
-}
+// if ('serviceWorker' in navigator) {
+// 	navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(reg => {
+// 		if (reg.installing) {
+// 			console.info('%cpwa.js: Service worker installing', CONSOLE_STYLE);
+// 		} else if (reg.waiting) {
+// 			console.info('%cpwa.js: Service worker installed', CONSOLE_STYLE);
+// 		} else if (reg.active) {
+// 			console.info('%cpwa.js: Service worker active', CONSOLE_STYLE);
+// 		}
+// 	}).catch(error => {
+// 		console.info(`%cpwa.js: Registration failed with ${error}`, CONSOLE_STYLE);
+// 	});
+// }
+
+// Unregister all serviceworkers - I want to test the site without PWA functionality
+navigator.serviceWorker.getRegistrations().then(registrations => {
+	for (let registration of registrations) {
+		registration.unregister();
+	}
+});
+
 
 /*************************************************************
 * Fill in the current year for (c) at the bottom of the page *

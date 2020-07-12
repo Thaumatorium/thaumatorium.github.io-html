@@ -1,15 +1,6 @@
 body>footer {
-	display: grid;
-	grid-template-areas: "copyright . secret";
-	grid-template-columns: auto 1fr auto;
-}
-
-body>footer .copyright {
-	grid-area: copyright;
-}
-
-body>footer .secret {
-	grid-area: secret;
+	display: flex;
+	flex-direction: column;
 }
 
 body>footer {
@@ -44,4 +35,10 @@ body>footer>nav span {
 	color: #800;
 	font: 18px Arial, sans-serif;
 	cursor: default;
+}
+
+@media (min-width: 720px) {
+	body>footer {
+		flex-direction: row;
+	}
 }

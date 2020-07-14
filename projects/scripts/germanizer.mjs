@@ -4,7 +4,11 @@ const in_decode = document.getElementById("germanizer-in-decode");
 const out_decode = document.getElementById("germanizer-out-decode");
 
 in_encode.addEventListener('input', () => {
-	out_encode.value = in_encode.value.replace(/./g, (m) => encode[m] !== undefined ? encode[m] : m);
+	out_encode.value = Array.from(in_encode.value).map((m) => encode[m] !== undefined ? encode[m] : m).join("");
+});
+
+in_encode.addEventListener('click', () => {
+	in_encode.select();
 });
 
 out_encode.addEventListener('click', () => {
@@ -12,8 +16,12 @@ out_encode.addEventListener('click', () => {
 	document.execCommand('copy');
 });
 
+in_decode.addEventListener('click', () => {
+	in_decode.select();
+});
+
 in_decode.addEventListener('input', () => {
-	out_decode.value = in_decode.value.replace(/[^\x00-\x7F]{2}/g, (m) => decode[m] !== undefined ? decode[m] : m);
+	out_decode.value = Array.from(in_decode.value).map((m) => decode[m] !== undefined ? decode[m] : m).join("");
 });
 
 out_decode.addEventListener('click', () => {

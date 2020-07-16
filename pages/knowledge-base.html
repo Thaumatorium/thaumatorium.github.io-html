@@ -35,6 +35,7 @@
 
 		gtag('config', 'UA-169207994-1');
 	</script>
+
 	<header>
 		<h1 class=title>The Thaumatorium:</h1>
 		<div class=subtitle>Where the magic happens</div>
@@ -62,8 +63,50 @@
 
 	<main>
 		<section>
-			<h2>Code of Conduct</h2>
-			<img src=/images/conduct.webp alt="the Code of Conduct for this site">
+			<h2>Knowledge base</h2>
+			<p>For now (2020-07-16) it's just snippets of JS and regex that I use every now and then</p>
+			<p>I'd use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists&hellip;</p>
+			<section>
+				<details open>
+					<summary>
+						<h3>Javascript oneliners</h3>
+					</summary>
+					<table>
+						<tbody>
+							<tr>
+								<th> note
+								<th> code
+							<tr>
+								<td> Open all collapsed comments
+								<td> <code>document.querySelectorAll(".expand").forEach(el => { if (el.innerText == "[+]") { el.click(); } });</code>
+							<tr>
+								<td>Manipulating Unicode strings per code point, not per byte
+								<td><code>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗").map(letter => {});</code>
+							<tr>
+								<td>Remove all <code>.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)
+								<td><code>document.querySelectorAll(".bighead").forEach(el => el.parentElement.removeChild(el));</code>
+						</tbody>
+					</table>
+				</details>
+			</section>
+
+			<section>
+				<details open>
+					<summary>
+						<h3>Regular Expressions</h3>
+					</summary>
+					<table>
+						<tbody>
+							<tr>
+								<th> note
+								<th> regex
+							<tr>
+								<td> my note
+								<td> vscode didn't remember my regexes, so I gotta start from scratch ;_;
+						</tbody>
+					</table>
+				</details>
+			</section>
 		</section>
 	</main>
 

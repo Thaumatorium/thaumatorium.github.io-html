@@ -33,6 +33,6 @@ https://w3c.github.io/manifest/
 *Support level:*
 https://caniuse.com/#feat=web-app-manifest
 
-## Support
+## Financial Support
 
-[![ko-fi](https://thaumatorium.com/images/ko-fi-support.svg)](https://ko-fi.com/J3J61VMSC)
+See the sidebar!

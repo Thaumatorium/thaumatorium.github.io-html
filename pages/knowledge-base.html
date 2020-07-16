@@ -68,7 +68,7 @@
 			<p>I'd use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub
 					Gist</a> exists&hellip;</p>
 			<section>
-				<details open>
+				<details>
 					<summary>
 						<h3>Javascript oneliners</h3>
 					</summary>
@@ -87,7 +87,8 @@
 					}
 				});</code></pre>
 							<tr>
-								<td>Manipulating Unicode strings per code point, not per byte. <code>"".split()</code> gives you bytes, not codepoints
+								<td>Manipulating Unicode strings per code point, not per byte. <code>"".split()</code> gives you bytes,
+									not codepoints
 								<td>
 									<code>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code>
 							<tr>
@@ -127,7 +128,8 @@ ys.map(e => e.click());</code></pre>
 const uniqueCities = [...new Set(cities)];
 // ["Den Haag", "Utrecht", "Arnhem", "MiddelBurg"]</code></pre>
 							<tr>
-								<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests per minute)
+								<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests
+									per minute)
 								<td>
 									<pre><code>let xs = document.querySelectorAll("[query goes here]");
 let i = 0;
@@ -160,11 +162,41 @@ clearInterval(id);</code></pre>
 								<th> note
 								<th> regex
 							<tr>
-								<td> my note
-								<td> vscode didn't remember my regexes, so I gotta start from scratch ;_;
+								<td>Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br>
+									Edit the number in between {} to find the nth comma.
+								<td><code>,(?=(?:[^,]*,){3}[^,]*$)</code>
+							<tr>
+								<td>Every line that doesn’t start with a <code>.</code> via regex;<br>
+									I was trying to filter bootstrap.css from all non-classes
+								<td><code>^((?!^\.).)*$</code>
+							<tr>
+								<td>Filter everything from a : till the end of the line
+								<td><code>[:].*$</code>
+							<tr>
+								<td>Find non-ASCII letters in vscode;<br>
+									Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your
+									comments...
+								<td>([^\x00-\x7F])
 						</tbody>
 					</table>
 				</details>
+
+				<section>
+					<!-- too lazy to format via CSS -->
+					<h2>Regex explanation</h2>
+					<pre><code>( ) = grouping; use $1-$9 in the replace window to refer to this. $0 is the whole regex
+[ – ] = a range of choices; usually choices are [a-z], [A-Z], [0-9]
+[abc] = a list of choices; same as (a|b|c)
+^ = not (this only counts if ^ exists between [ ] at the start)
+\x00 = 0
+\x7F = 127
+(?=…)	= Positive lookahead
+(?!…) =	Negative lookahead
+(?:…) =	Non-capturing group; doesn't get saves to $1-$9</code></pre>
+					<br>
+					<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want all
+						NON-ASCII characters, we’re using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
+				</section>
 			</section>
 		</section>
 	</main>

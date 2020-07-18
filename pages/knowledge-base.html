@@ -146,6 +146,41 @@ clearInterval(id);</code></pre>
 										 el.querySelector(`[data-event-action*="delete"]`)
 									 })
 									 .map(el => el.click());</code></pre>
+							<tr>
+								<td>Use on Twitch to track the amount of currently used emotes
+								<td>
+									<pre><code>let emoticons = Array.from(document.querySelectorAll(`.chat-line__message--emote[alt]`));
+										const groupBy = (xs, key) => xs.reduce((acc, x) => {
+											(acc[x[key]] = acc[x[key]] || []).push(x);
+											return acc;
+										}, {});
+										
+										let groupedEmoticons = groupBy(emoticons, 'alt');
+										
+										for (const key in groupedEmoticons) {
+											if (groupedEmoticons.hasOwnProperty(key)) {
+												const el = groupedEmoticons[key];
+												groupedEmoticons[key] = el.length;
+											}
+										}
+										
+										/*
+										groupedEmoticons = {
+											DansGame: 16,
+											LUL: 39,
+											LULW: 84,
+											OMEGALUL: 33,
+											PepeLaugh: 17,
+											elaSmile: 16,
+											reckGL: 16,
+											richkidP: 16,
+											rooSuffer: 16,
+											xqcHAA: 16
+										}
+										*/
+										
+										// Then use groupedEmoticons, maybe with some list of src's of emoticons
+										// Display it in a relatively scaled table, maybe?</code></pre>
 						</tbody>
 					</table>
 				</details>
@@ -194,8 +229,8 @@ clearInterval(id);</code></pre>
 (?!…) =	Negative lookahead
 (?:…) =	Non-capturing group; doesn't get saves to $1-$9</code></pre>
 					<br>
-					<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want all
-						NON-ASCII characters, we’re using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
+					<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want
+						all NON-ASCII characters, we’re using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
 				</section>
 			</section>
 		</section>

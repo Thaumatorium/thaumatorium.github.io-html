@@ -149,38 +149,42 @@ clearInterval(id);</code></pre>
 							<tr>
 								<td>Use on Twitch to track the amount of currently used emotes
 								<td>
-									<pre><code>let emoticons = Array.from(document.querySelectorAll(`.chat-line__message--emote[alt]`));
-										const groupBy = (xs, key) => xs.reduce((acc, x) => {
-											(acc[x[key]] = acc[x[key]] || []).push(x);
-											return acc;
-										}, {});
-										
-										let groupedEmoticons = groupBy(emoticons, 'alt');
-										
-										for (const key in groupedEmoticons) {
-											if (groupedEmoticons.hasOwnProperty(key)) {
-												const el = groupedEmoticons[key];
-												groupedEmoticons[key] = el.length;
-											}
-										}
-										
-										/*
-										groupedEmoticons = {
-											DansGame: 16,
-											LUL: 39,
-											LULW: 84,
-											OMEGALUL: 33,
-											PepeLaugh: 17,
-											elaSmile: 16,
-											reckGL: 16,
-											richkidP: 16,
-											rooSuffer: 16,
-											xqcHAA: 16
-										}
-										*/
-										
-										// Then use groupedEmoticons, maybe with some list of src's of emoticons
-										// Display it in a relatively scaled table, maybe?</code></pre>
+									<pre><code>const groupBy = (xs, key) => xs.reduce((acc, x) => {
+	(acc[x[key]] = acc[x[key]] || []).push(x);
+	return acc;
+}, {});
+
+let emoticons = Array.from(document.querySelectorAll(`.chat-line__message--emote[alt]`));
+let groupedEmoticons = groupBy(emoticons, 'alt');
+let listedEmoticons = [];
+
+for (const key in groupedEmoticons) {
+	if (groupedEmoticons.hasOwnProperty(key)) {
+		const el = groupedEmoticons[key];
+		listedEmoticons.push({key: key, length: el.length});
+	}
+}
+
+listedEmoticons.sort((a, b) => b.length - a.length)
+							 .slice(0,5);
+
+/*
+groupedEmoticons = {
+	DansGame: 16,
+	LUL: 39,
+	LULW: 84,
+	OMEGALUL: 33,
+	PepeLaugh: 17,
+	elaSmile: 16,
+	reckGL: 16,
+	richkidP: 16,
+	rooSuffer: 16,
+	xqcHAA: 16
+}
+*/
+
+// Then use groupedEmoticons, maybe with some list of src's of emoticons
+// Display it in a relatively scaled table, maybe?</code></pre>
 						</tbody>
 					</table>
 				</details>

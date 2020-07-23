@@ -166,25 +166,9 @@ for (const key in groupedEmoticons) {
 }
 
 listedEmoticons.sort((a, b) => b.length - a.length)
-							 .slice(0,5);
-
-/*
-groupedEmoticons = {
-	DansGame: 16,
-	LUL: 39,
-	LULW: 84,
-	OMEGALUL: 33,
-	PepeLaugh: 17,
-	elaSmile: 16,
-	reckGL: 16,
-	richkidP: 16,
-	rooSuffer: 16,
-	xqcHAA: 16
-}
-*/
-
-// Then use groupedEmoticons, maybe with some list of src's of emoticons
-// Display it in a relatively scaled table, maybe?</code></pre>
+							 .slice(0,6)
+							 .sort((a, b) => a.length - b.length)
+							 .reduce((acc, el) => `${el.length}x ${el.key} ` + acc);</code></pre>
 						</tbody>
 					</table>
 				</details>

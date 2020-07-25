@@ -68,6 +68,8 @@ body a {
 
 body>main p {
 	margin: 0 0 5px 0;
+	font-size: 1.2em;
+	padding: 5px 0 10px 0;
 }
 
 body>main figure {
@@ -120,6 +122,7 @@ ul {
 
 li {
 	list-style-type: '– ';
+	font-size: 1.2em;
 }
 
 .disclaimer {

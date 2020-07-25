@@ -192,8 +192,7 @@ For more information: https://www.w3.org/International/questions/qa-html-encodin
 				</h2>
 				<p>The date you see is <q>date created</q>, not <q>edited</q> or <q>done</q></p>
 				<ul>
-					<li><time>2020-07-25</time> Create an Ubuntu Beginner Guide, with commands I wish I knew when I started. Try
-						to make it 1 or 2 A4's large.
+					<li><time>2020-07-25</time> Create an Ubuntu Beginner Guide, with commands I wish I knew when I started. Try to make it 1 or 2 A4's large.
 					<li><time>2020-07-16</time> Add a "saying of the refresh" where there's a translated Dutch
 						saying/adage/proverb/aphorism</li>
 					<li><time>2020-07-16</time> Add a notification for unsupported browsers. This site assumes you have an updated
@@ -289,20 +288,13 @@ For more information: https://www.w3.org/International/questions/qa-html-encodin
 				<hr>
 				<div id="hyvor-talk-view"></div>
 				<script type="text/javascript">
-					window.addEventListener("load", () => {
-						let HYVOR_TALK_WEBSITE = 1095; // DO NOT CHANGE THIS
-						let HYVOR_TALK_CONFIG = {
-							url: false,
-							id: false
-						};
-
-						let tag = document.createElement("script");
-						tag.src = "//talk.hyvor.com/web-api/embed";
-						tag.async = true;
-						tag.type = "text/javascript";
-						document.getElementsByTagName("head")[0].appendChild(tag);
-					});
+					var HYVOR_TALK_WEBSITE = 1095; // DO NOT CHANGE THIS
+					var HYVOR_TALK_CONFIG = {
+						url: false,
+						id: false
+					};
 				</script>
+				<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
 			</section>
 		</article>
 	</main>

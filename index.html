@@ -289,7 +289,7 @@ For more information: https://www.w3.org/International/questions/qa-html-encodin
 				<hr>
 				<div id="hyvor-talk-view"></div>
 				<script type="text/javascript">
-					setTimeout(() => {
+					window.addEventListener("load", () => {
 						let HYVOR_TALK_WEBSITE = 1095; // DO NOT CHANGE THIS
 						let HYVOR_TALK_CONFIG = {
 							url: false,
@@ -298,9 +298,10 @@ For more information: https://www.w3.org/International/questions/qa-html-encodin
 
 						let tag = document.createElement("script");
 						tag.src = "//talk.hyvor.com/web-api/embed";
+						tag.async = true;
 						tag.type = "text/javascript";
 						document.getElementsByTagName("head")[0].appendChild(tag);
-					}, 3000);
+					});
 				</script>
 			</section>
 		</article>

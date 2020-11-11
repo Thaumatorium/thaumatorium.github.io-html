@@ -7,6 +7,10 @@ This is a copy because the download was SO freaking slow.
 # Howto
 Place `UIFlow_StickC-v1.6.5.1.bin` in the `M5Burner\packages\fw\stickc` folder and restart the **M5Burner** program.
 
+# ESP32 die shot
+
+I've added an upscaled `die shot` (as they call it). Original version is from https://www.cnx-software.com/2017/02/06/oh-look-espressif-esp32-die-shot-thats-pretty/
+
 # Hashes
 
 **Optional:** If you know know what these are you'll know what to do with these. *If you don't, don't sweat it* :-)

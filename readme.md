@@ -1,5 +1,13 @@
 # Thaumatorium.com
 
+## Archived (2022-11-20)
+
+I'm archiving this version of the site, so I can rebuild it using [Hugo](https://gohugo.io/) (a static site generator, which should be perfect for me).
+
+I am doing this because I'm sick of manually updating things; I now have enough content I _need_ some automation. The second reason is to build some experience with Hugo, because I intend to use it in the future for another site :)
+
+I want to make sure to keep a backup of this version, without it being hidden behind some branchname or whatever. It always annoys me to find something important being hidden in a branch or tag.
+
 ## Introduction
 
 The website is all handwritten HTML, CSS and JS.
